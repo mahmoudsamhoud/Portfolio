@@ -28,10 +28,10 @@ My Personal <br>
 Information
 
 .about__name
-Mahmoud Samhoud
+Liz Delz
 
 .about__profession
-Data Analyst
+Web & Visual Designer
 
 .about__description
 Passionate about creating <b>Web Pages</b> with 
