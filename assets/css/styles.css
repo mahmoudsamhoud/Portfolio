@@ -238,6 +238,12 @@ img {
 /* Change background header */
 
 /* Header background color of other pages */
+.header-pages {
+  background-color: var(--body-color);
+}
+.header-pages :is(.nav__logo, .nav__toggle) {
+  color: var(--title-color);
+}
 
 /*=============== BUTTON ===============*/
 .button {
@@ -249,9 +255,9 @@ img {
   transition: background-color 0.4s, box-shadow 0.4s;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--first-color-alt);
-  box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, 0.3));
+  box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, 0.3);
 }
 
 /*=============== HOME ===============*/
