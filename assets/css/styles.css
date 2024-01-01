@@ -359,6 +359,10 @@ body.dark-theme {
   justify-self: center;
 }
 
+.home__content {
+  row-gap: 3rem;
+}
+
 .home__data {
   row-gap: 0.75rem;
   text-align: center;
@@ -678,7 +682,15 @@ body.dark-theme {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-inline: 1rem;
+  }
 
+  .about__skills-content {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
 /* For medium devices */
 
 /* For large devices */
