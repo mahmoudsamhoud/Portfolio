@@ -225,7 +225,7 @@ body.dark-theme {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--first-color);
+  background-color: transparent;
   z-index: var(--z-fixed);
   transition: background-color 0.4s, box-shadow 0.4s;
 }
