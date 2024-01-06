@@ -684,6 +684,101 @@ body.dark-theme {
 .show-scroll {
   bottom: 3rem;
 }
+
+/* Post Content */
+
+.post-header {
+  width: 100%;
+  height: 200px;
+  background-color: var(--body-color);
+}
+
+.post-container {
+  margin: auto;
+  width: 100%;
+  padding: 20px 15px 10px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+}
+
+.header-title {
+  width: 90%;
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-content {
+  margin-top: 3rem !important;
+}
+
+.sub-heading {
+  font-size: var(--h2-font-size);
+}
+
+.post-text {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  line-height: 1.4rem;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.post-container ol {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+.post-container ul {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  list-style-type: square;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+.post-container ul ul {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  list-style-type: circle;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+.post-img {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  object-position: center;
+  width: 300px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -705,6 +800,22 @@ body.dark-theme {
   .about__button {
     grid-template-columns: 400px;
     justify-content: center;
+  }
+
+  .post-container {
+    width: 95%;
+  }
+
+  .post-img {
+    width: 400px;
+  }
+
+  .post-header {
+    height: 300px;
+  }
+
+  .header-img {
+    height: 250px;
   }
 }
 
@@ -732,6 +843,37 @@ body.dark-theme {
   .contact__send {
     justify-self: center;
     margin-top: 1.5rem;
+  }
+
+  .post-container {
+    width: 85%;
+  }
+
+  .post-img {
+    width: 500px;
+  }
+
+  .post-header {
+    height: 330px;
+  }
+
+  .header-img {
+    height: 300px;
+  }
+
+  .post-container ol {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-container ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-container ul ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 /* For large devices */
@@ -900,6 +1042,18 @@ body.dark-theme {
 
   .about__skills-img {
     width: 40px;
+  }
+
+  .post-img {
+    width: 800px;
+  }
+
+  .post-header {
+    height: 440px;
+  }
+
+  .header-img {
+    height: 400px;
   }
 }
 
