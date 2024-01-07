@@ -65,6 +65,97 @@
       </nav>
     </header>
 
+    <!--========== Post Content ===============-->
+    <section class="post-header">
+      <div class="header-content post-container">
+        <!-- Title -->
+        <h1 class="header-title">Predicting Credit Card Approval</h1>
+        <img src="../../img/work-5.jpg" alt="CC-Approval" class="header-img" />
+      </div>
+    </section>
+
+    <section class="post-content post-container">
+      <p class="post-text">
+        Check the project on
+        <a
+          href="https://github.com/mahmoudsamhoud/Predicting-Credit-Card-Approvals"
+          target="_blank"
+          >GitHub</a
+        >
+      </p>
+      <h2 class="sub-heading">Introduction</h2>
+      <p class="post-text">
+        Commercial banks receive a lot of applications for credit cards. Many of
+        them get rejected for many reasons, like high loan balances, low-income
+        levels, or too many inquiries on an individual’s credit report, for
+        example. Manually analyzing these applications is mundane, error-prone,
+        and time-consuming. Luckily, this task can be automated with the power
+        of machine learning and pretty much every commercial bank does so
+        nowadays.
+      </p>
+
+      <h2 class="sub-heading">Objectives</h2>
+      <p class="post-text">
+        Building a machine learning model that predict the approval of credit
+        card applications.
+      </p>
+
+      <h2 class="sub-heading">About Dataset</h2>
+      <p class="post-text">
+        The
+        <a href="https://archive.ics.uci.edu/dataset/27/credit+approval"
+          >dataset</a
+        >
+        is the one the UCI machine learning repository. The features of this
+        dataset have been anonymized to protect the privacy, but this
+        <a
+          href="[https://rstudio-pubs-static.s3.amazonaws.com/73039_9946de135c0a49daa7a0a9eda4a67a72.html"
+          >blog</a
+        >
+        gives us a pretty good overview of the probable features. The probable
+        features in a typical credit card application are:
+      </p>
+
+      <ul>
+        <li>• Gender</li>
+        <li>Age</li>
+        <li>Debt</li>
+        <li>Married</li>
+        <li>BankCustomer</li>
+        <li>EducationalLevel</li>
+        <li>Ethnicity</li>
+        <li>YearsEmployed</li>
+        <li>PriorDefault</li>
+        <li>Employed</li>
+        <li>CreditScore</li>
+        <li>DriversLicense</li>
+        <li>Citizen</li>
+        <li>ZipCode</li>
+        <li>Income</li>
+        <li>ApprovalStatus</li>
+      </ul>
+
+      <h2 class="sub-heading">Approach</h2>
+      <ol>
+        <li>
+          The data was imported and then decrypted using this
+          <a
+            href="https://rstudio-pubs-static.s3.amazonaws.com/73039_9946de135c0a49daa7a0a9eda4a67a72.html"
+            >blog</a
+          >
+        </li>
+        <li>The data was split into training set and testing set</li>
+        <li>
+          The missing values in numeric and non-numeric columns were handled
+        </li>
+        <li>Data conversion and feature scaling were performed</li>
+        <li>A Logistic Regression Model was fitted to the train set</li>
+        <li>
+          The performance of the model was evaluated using Confusion matrix
+        </li>
+      </ol>
+    </section>
+
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__container container grid">
