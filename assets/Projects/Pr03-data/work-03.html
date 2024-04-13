@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== FONTAWESOM ===============-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../css/styles.css" />
+
+    <title>Pr03-AdvantureWorks</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header header-pages" id="header">
+      <nav class="nav container">
+        <a href="../../../index.html" class="nav__logo">M.Samhoud</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="../../../about.html" class="nav__link">About Me</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="../../../work.html" class="nav__link">Portfolio</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="../../../contact.html" class="button">Contact Me</a>
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div class="nav__actions">
+          <!-- Theme button -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--========== Post Content ===============-->
+    <section class="post-header">
+      <div class="header-content post-container">
+        <!-- Title -->
+        <h1 class="header-title">AdvantureWorks Dashboard</h1>
+        <img
+          src="../../img/work-3.jpg"
+          alt="Pr03-AdvantureWorks"
+          class="header-img"
+        />
+      </div>
+    </section>
+
+    <section class="post-content post-container">
+      <p class="post-text">
+        Check the project on
+        <a
+          href="https://github.com/mahmoudsamhoud/Adventure-Works-PowerBI"
+          target="_blank"
+          >GitHub</a
+        >
+      </p>
+      <h2 class="sub-heading">Introduction</h2>
+      <p class="post-text">
+        Adventure Works Cycles is a fictitious manufacturing company that
+        produces and distributes metal and composite bicycles to commercial
+        markets in North America, Europe, and Asia. The headquarters for
+        Adventure Works Cycles is Bothell, Washington, where the company employs
+        500 workers. Additionally, Adventure Works Cycles employs several
+        regional sales teams throughout its market base.
+      </p>
+
+      <h2 class="sub-heading">Objectives</h2>
+      <p class="post-text">
+        The aim of this project is to gain insights into the following:
+      </p>
+      <ul>
+        <li>Track KPIs (Orders, revenue, returns)</li>
+        <li>Compare regional performance</li>
+        <li>Analyze product-level trends</li>
+        <li>Identify high-value customers.</li>
+      </ul>
+
+      <h2 class="sub-heading">About Dataset</h2>
+      <p class="post-text">
+        The data used in this project are 10 CSV files that contain 3 categories
+        of data:
+      </p>
+      <ol>
+        <li>
+          Customer data (name, username, birthdate, marital status, annual
+          income, gender, etc...)
+        </li>
+        <li>
+          Product data (name, code, size, model, price, color, main product
+          category, subcategory, etc...)
+        </li>
+        <li>
+          Sales data for three years 2015, 2016, 2017 (order date, order number,
+          buyer, order quantity, territory, etc...)
+        </li>
+      </ol>
+
+      <h2 class="sub-heading">Analysis Method</h2>
+      <p class="post-text">
+        The data files were transformed and processed using
+        <strong>Power BI</strong> to ensure data completeness and validity. A
+        relational data model was built to facilitate efficient management,
+        retrieval and analysis. New columns and measures were added to help with
+        the analysis. Finally, the dashboard was created to help client track
+        KPIs (sales, revenue, returns), compare regional performances, analyze
+        product-level trends and forecasts, and identify high-level customers.
+      </p>
+
+      <h2 class="sub-heading">Model View</h2>
+      <img src="model-view.png" alt="model-view" class="post-img" />
+
+      <h2 class="sub-heading">Resulting Dashboard</h2>
+      <p class="post-text">The dashboard has three pages:</p>
+      <ul>
+        <li>Executive summary page from which we can track:</li>
+        <ul>
+          <li>
+            Monthly revenue, monthly orders, monthly returns items for current
+            month compared to previous month
+          </li>
+          <li>
+            Top product in terms of orders as well as a list of all products
+            ordered by total orders and the number of returns
+          </li>
+          <li>Top product in terms of profit</li>
+          <li>Total orders for each category of products</li>
+          <li>Total orders for subcategories of each main category</li>
+          <li>
+            Reginal performance for three regions, North America, Europe, and
+            Pacific.
+          </li>
+        </ul>
+        <img
+          src="Executive_Summary.png"
+          alt="Executive_Summary"
+          class="post-img"
+        />
+        <li>
+          Product page from which we zoom into a single product and track:
+        </li>
+        <ul>
+          <li>Current month orders vs previous month</li>
+          <li>Current month revenue vs previous month</li>
+          <li>Current month returns vs previous month</li>
+          <li>Weekly profit and returns</li>
+        </ul>
+        <img src="Product_Detail.png" alt="" class="post-img" />
+        <li>Customer detail page from which we can track:</li>
+        <ul>
+          <li>Top 100 customers in terms of revenue</li>
+          <li>Total orders for each gender</li>
+          <li>Total orders of different income levels for customers</li>
+          <li>Total orders by customers’ age</li>
+          <li>
+            Name of top customer and the corresponding number of orders and
+            revenue.
+          </li>
+        </ul>
+        <img src="Customer_Detail.png" alt="" class="post-img" />
+      </ul>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <div class="footer__content grid">
+          <a href="../../../index.html" class="footer__logo">M.Samhoud</a>
+          <ul class="footer__links">
+            <li>
+              <a href="../../../about.html" class="footer__link">About Me</a>
+            </li>
+
+            <li>
+              <a href="../../../work.html" class="footer__link">Portfolio</a>
+            </li>
+
+            <li>
+              <a href="../../../contact.html" class="footer__link"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+
+          <div class="footer__social">
+            <a
+              href="https://github.com/mahmoudsamhoud"
+              target="_blank"
+              title="GitHub"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mahmoudsamhoud/"
+              target="_blank"
+              title="LinkedIn"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a
+              href="https://www.kaggle.com/msamhoud"
+              target="_blank"
+              title="Kaggle"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-kaggle"></i>
+            </a>
+
+            <a
+              href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
+              target="_blank"
+              title="Hackerrank"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-hackerrank"></i>
+            </a>
+
+            <a
+              href="https://medium.com/@m.samhoud"
+              target="_blank"
+              title="Medium"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-medium"></i>
+            </a>
+
+            <a
+              href="https://hashnode.com/@msamhoud"
+              title="Hashnode"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <i class="fa-brands fa-hashnode"></i>
+            </a>
+          </div>
+        </div>
+        <span class="footer__copy">
+          &#169; All Rights Reserved By M.Samhoud
+        </span>
+      </div>
+    </footer>
+    <!--=============== MAIN JS ===============-->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
