@@ -957,7 +957,7 @@ textarea.input {
   }
 
   .sidebar {
-    width: 100%;
+    width: 35%;
     z-index: 999;
     transform: translate(-100%);
   }
