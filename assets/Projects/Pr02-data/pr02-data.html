@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" href="../../img/favicon.png" type="image/x-icon" />
+    <!--========== UNICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--========== BOXICONS ==========-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>Retailer Sales Analysis</title>
+  </head>
+
+  <body>
+    <div class="post">
+      <!--===== Header =====-->
+      <header>
+        <div class="nav__post container">
+          <a href="../../../index.html" class="logo">M.S<span>amhoud</span></a>
+          <a href="../../../index.html" class="home__icon"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </div>
+      </header>
+
+      <!--===== Post Header =====-->
+      <section class="post-header">
+        <div class="header-content post-container">
+          <!--===== Post Title =====-->
+          <h1 class="header-title">Retailer Sales Analysis</h1>
+
+          <!--======= Post Image ======-->
+          <img src="work-2.jpg" alt="pr02 img" class="header-img" />
+        </div>
+      </section>
+
+      <!--===== Post Content ======-->
+
+      <section class="post-content post-container">
+        <!--====== Introduction ======-->
+        <h2 class="sub-heading">Introduction</h2>
+        <p class="post-text">
+          Mega Mart is a multinational corporation that operates a chain of
+          retail and grocery stores. Mega Mart management is planning to acquire
+          another retailer to expand its market share. The company has provided
+          Mega Mart with several tables relating to their customers and sales to
+          be analyzed by Mega Mart to gain insights and to be able to decide
+          whether to acquire this company or not.
+        </p>
+
+        <!--====== Objectives ======-->
+        <h2 class="sub-heading">Objectives</h2>
+        <p class="post-text">Mega Mart management need to get insights into</p>
+        <ul class="a">
+          <li>
+            <p class="list-text">Overall statistics (KPIs):</p>
+            <ul class="b">
+              <li><p class="list-text">The total sales</p></li>
+              <li><p class="list-text">Total discount</p></li>
+              <li><p class="list-text">Overall percentage discount</p></li>
+              <li><p class="list-text">Avg discount percentage</p></li>
+              <li><p class="list-text">Total quantity sold</p></li>
+              <li>
+                <p class="list-text">
+                  Max quantity sold in a single transaction
+                </p>
+              </li>
+              <li><p class="list-text">Total sales value per basket</p></li>
+              <li><p class="list-text">Total sales value per household</p></li>
+            </ul>
+          </li>
+
+          <li><p class="list-text">Monthly Trend for Sales</p></li>
+          <li><p class="list-text">Weekly Trend for sales</p></li>
+          <li><p class="list-text">2016 sales vs 2017 sales</p></li>
+          <li>
+            <p class="list-text">Household:</p>
+            <ul class="b">
+              <li>
+                <p class="list-text">
+                  The distribution of total sales value purchased at the
+                  household level.
+                </p>
+              </li>
+              <li><p class="list-text">Top 10 households by sales value</p></li>
+              <li>
+                <p class="list-text">Top 10 households by quantity purchased</p>
+              </li>
+              <li>
+                <p class="list-text">
+                  Total sales value for our top 10 households by value, ordered
+                  from highest to lowest.
+                </p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="list-text">Products:</p>
+            <ul class="b">
+              <li>
+                <p class="list-text">
+                  Products that had the most sales by sales value
+                </p>
+              </li>
+              <li>
+                <p class="list-text">
+                  Did the top selling items have a higher avg discount rate?
+                </p>
+              </li>
+              <li><p class="list-text">Top 10 products by sales</p></li>
+              <li>
+                <p class="list-text">
+                  The item that had the highest quantity sold in a single
+                  transaction.
+                </p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="list-text">Demographics:</p>
+            <ul class="b">
+              <li><p class="list-text">Sales by age_desc</p></li>
+              <li><p class="list-text">Sales by income_desc.</p></li>
+              <li>
+                <p class="list-text">
+                  Mean household sales by AGE_DESC and HH_COMP_DESC.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--====== Dataset ======-->
+
+        <!--====== Analysis ======-->
+        <h2 class="sub-heading">Analysis Method</h2>
+        <p class="post-text">
+          I used <strong>Python</strong> to read in multiple flat files, down
+          cast some data fields to reduce memory usage, join tables to provide a
+          single source of information, shape and aggregate sales data to
+          calculate KPIs, and visualize the data to communicate findings.
+        </p>
+
+        <!--====== Results ======-->
+        <h2 class="sub-heading">Results and Findings</h2>
+        <ul class="a">
+          <li>
+            <p class="list-text">Overall statistics (KPIs):</p>
+            <ul class="b">
+              <li><p class="list-text">The total sales: $ 6,666,243.5</p></li>
+              <li><p class="list-text">Total discount: $ 1,184,696.9</p></li>
+              <li>
+                <p class="list-text">Overall percentage discount: 17.77%</p>
+              </li>
+              <li><p class="list-text">Avg discount percentage: 21.2%</p></li>
+              <li><p class="list-text">Total quantity sold: 216,713,611</p></li>
+              <li>
+                <p class="list-text">
+                  Max quantity sold in a single transaction: 89,638
+                </p>
+              </li>
+              <li>
+                <p class="list-text">Total sales value per basket: $28.61</p>
+              </li>
+              <li>
+                <p class="list-text">
+                  Total sales value per household: $3,175.9
+                </p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="list-text">Monthly Trend for Sales</p>
+            <img
+              src="monthly-trend-for-sales.png"
+              alt="monthly-trend-for-sales"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <p class="list-text">Weekly Trend for sales</p>
+            <img
+              src="weekly-trend-for-sales.png"
+              alt="weekly-trend-for-sales"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <p class="list-text">2016 sales vs 2017 sales</p>
+            <img
+              src="2016-sales-vs-2017-sales.png"
+              alt="2016-sales-vs-2017-sales"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <p class="list-text">Household:</p>
+            <ul class="b">
+              <li>
+                <p class="list-text">
+                  The distribution of total sales value purchased at the
+                  household level.
+                </p>
+                <img
+                  src="distribution-of-total-sales-value-purchased-at-hh-level.png"
+                  alt="distribution-of-total-sales-value-purchased-at-hh-level"
+                  class="post-img"
+                />
+              </li>
+
+              <li>
+                <p class="list-text">Top 10 households by sales value</p>
+                <img
+                  src="top-10-hh-by-value.png"
+                  alt="top-10-hh-by-value"
+                  class="post-img"
+                />
+              </li>
+
+              <li>
+                <p class="list-text">Top 10 households by quantity purchased</p>
+                <img
+                  src="top-10-hh-by-qty.png"
+                  alt="top-10-hh-by-qty"
+                  class="post-img"
+                />
+              </li>
+
+              <li>
+                <p class="list-text">
+                  Total sales value for our top 10 households by value, ordered
+                  from highest to lowest.
+                </p>
+                <img
+                  src="total-sales-top-10-hh-by-value.png"
+                  alt="total-sales-top-10-hh-by-value"
+                  class="post-img"
+                />
+              </li>
+            </ul>
+          </li>
+
+          <li><p class="list-text">Products:</p></li>
+          <ul class="b">
+            <li>
+              <p class="list-text">
+                Products that had the most sales by sales value
+              </p>
+              <img
+                src="products-with-most-sales-by-sales-value.png"
+                alt="products-with-most-sales-by-sales-value"
+                class="post-img"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                The avg discount of top selling items is 10.33% which is lower
+                that the avg discount.
+              </p>
+            </li>
+            <li>
+              <p class="list-text">Top 10 products by sales</p>
+              <img
+                src="top-10-products-by-sales.png"
+                alt="top-10-products-by-sales"
+                class="post-img"
+              />
+            </li>
+
+            <li>
+              <p class="list-text">
+                The item that had the highest quantity sold in a single
+                transaction.
+              </p>
+              <img
+                src="item-with-highest-qty-sold-in-one-transaction.png"
+                alt="item-with-highest-qty-sold-in-one-transaction"
+                class="post-img"
+              />
+            </li>
+          </ul>
+
+          <li><p class="list-text">Demographics:</p></li>
+          <ul class="b">
+            <li>
+              <p class="list-text">Sales by age_desc</p>
+              <img
+                src="total-sales-by-age-desc.png"
+                alt="total-sales-by-age-desc"
+                class="post-img"
+              />
+            </li>
+
+            <li>
+              <p class="list-text">Sales by income_desc.</p>
+              <img
+                src="Sales-by-income_desc.png"
+                alt="Sales-by-income_desc"
+                class="post-img"
+              />
+            </li>
+
+            <li>
+              <p class="list-text">
+                Mean household sales by AGE_DESC and HH_COMP_DESC.
+              </p>
+              <img
+                src="Mean-hh-sales-by-age-desc-and-hh-comp.png"
+                alt="Mean-hh-sales-by-age-desc-and-hh-comp"
+                class="post-img"
+              />
+            </li>
+          </ul>
+        </ul>
+
+        <!--====== Conclusion =======-->
+
+        <!--====== Link to Project ======-->
+        <p class="post-link">
+          Check the project on
+          <a
+            href="https://github.com/mahmoudsamhoud/MegaMart_Retailer_Acquision"
+            target="_blank"
+            ><span>GitHub</span></a
+          >
+        </p>
+      </section>
+
+      <!--===== FOOTER =====-->
+      <footer class="footer">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div>
+              <h1 class="footer__title">M.Samhoud</h1>
+              <span class="footer__subtitle"
+                >Mechanical Engineer / Data Analyst</span
+              >
+            </div>
+
+            <ul class="footer__links">
+              <li><a href="#work" class="footer__link">Work</a></li>
+              <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+
+            <div class="footer__socials">
+              <a
+                href="https://www.linkedin.com/in/mahmoudsamhoud/"
+                title="Linkedin"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/mahmoudsamhoud"
+                title="Github"
+                target="_blank"
+                class="footer__social"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
+                title="Hackerrank"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-hackerrank"></i
+              ></a>
+            </div>
+          </div>
+          <p class="footer__copy">&#169; M.Samhoud. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
