@@ -1083,6 +1083,26 @@ ol.bb li {
   color: var(--skin-color);
 }
 
+table {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--body-color);
+  text-align: center;
+}
+th {
+  font-size: 1.2rem;
+  font-weight: var(--font-bold);
+}
+td {
+  font-size: 1.1rem;
+  font-weight: var(--font-medium);
+}
+
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
 @media screen and (max-width: 1408px) {
