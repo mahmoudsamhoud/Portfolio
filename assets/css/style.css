@@ -1025,33 +1025,33 @@ header {
 }
 
 ul.a,
-ul.b,
-ol.c,
-ol.d {
+ul.aa,
+ol.b,
+ol.bb {
   margin-bottom: 1.5rem;
 }
 ul.a {
   list-style-type: disc;
 }
 
-ul.b {
+ul.aa {
   list-style-type: circle;
   margin-left: 2rem;
 }
 
-ol.c {
+ol.b {
   list-style: decimal;
 }
 
-ol.d {
+ol.bb {
   list-style-type: lower-alpha;
   margin-left: 2rem;
 }
 
 ul.a,
-ul.b,
-ol.c,
-ol.d li {
+ul.aa,
+ol.b,
+ol.bb li {
   margin-left: 3rem;
   margin-bottom: 0.75rem;
 }
