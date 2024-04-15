@@ -1015,10 +1015,17 @@ header {
   font-size: var(--h1-font-size);
 }
 
+.sub__sub-heading {
+  font-size: var(--h2-font-size);
+  color: var(--body-color);
+  font-weight: var(--font-bold);
+  margin-bottom: 0.75rem;
+}
+
 .post-text {
   font-family: var(--body-font);
   font-weight: var(--font-medium);
-  font-size: var(--normal-font-size);
+  font-size: 1.2rem;
   line-height: 1.7rem;
   margin: 1rem 0;
   text-align: justify;
@@ -1054,12 +1061,14 @@ ol.b,
 ol.bb li {
   margin-left: 3rem;
   margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-bold);
 }
 
 .list-text {
-  font-size: var(--normal-font-size);
+  font-size: 1.2rem;
   font-weight: var(--font-medium);
-  text-align: justify;
+  text-align: left;
   line-height: 1.7rem;
   margin: 0.25rem 0 0 0.25rem;
 }

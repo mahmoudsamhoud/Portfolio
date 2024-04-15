@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" href="../../img/favicon.png" type="image/x-icon" />
+    <!--========== UNICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--========== BOXICONS ==========-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>Healthcare-Analysis</title>
+  </head>
+
+  <body>
+    <div class="post">
+      <!--===== Header =====-->
+      <header>
+        <div class="nav__post container">
+          <a href="../../../index.html" class="logo">M.S<span>amhoud</span></a>
+          <a href="../../../index.html" class="home__icon"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </div>
+      </header>
+
+      <!--===== Post Header =====-->
+      <section class="post-header">
+        <div class="header-content post-container">
+          <!--===== Post Title =====-->
+          <h1 class="header-title">Healthcare Analysis With Power BI</h1>
+
+          <!--======= Post Image ======-->
+          <img src="work-4.jpeg" alt="pr04-img" class="header-img" />
+        </div>
+      </section>
+
+      <!--===== Post Content ======-->
+
+      <section class="post-content post-container">
+        <!--====== Introduction ======-->
+        <h2 class="sub-heading">Introduction</h2>
+        <p class="post-text">
+          HealthStat is a fictious consulting company that provides health care
+          analytics as a service. In healthcare analytics, quality metrics are
+          often classified across six domains:
+        </p>
+        <ol class="b">
+          <li>
+            <p class="list-text">
+              Safety: Avoiding harm to patients from the care that is intended
+              to help them.
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Effectiveness: How well a healthcare service achieves its intended
+              purpose.
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Timeliness: Reducing delays for both those who receive and those
+              who give care.
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Patient-Centered: Providing care that is respectful of and
+              responsive to individual patient preferences, needs, and values.
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Equity: Providing care that does not vary in quality because of
+              personal characteristics.
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Efficiency: Avoiding waste, including wase of equipment, supplies,
+              ideas, and energy.
+            </p>
+          </li>
+        </ol>
+
+        <p class="post-text">
+          The focus for this case study is
+          <strong> Efficiency </strong>
+          domain.
+          <br />
+          For further reading about quality measures, click this
+          <a
+            href="https://www.ahrq.gov/talkingquality/measures/six-domains.html"
+            target="_blank"
+            ><span>link</span></a
+          >
+        </p>
+
+        <h2 class="sub-heading">Measuring Hospital Efficiency</h2>
+        <p class="post-text">
+          Length of stay (LOS) is considered an important indicator of the
+          efficiency of hospital management. It's calculated as the total
+          duration in days for a patient stay in hospital. A shorter LOS is
+          often desirable in hospital operations. Primarily, shorter LOS means
+          costs can be lowered. Reducing LOS can also release capacity in the
+          system and improve throughput, enabling hospitals to serve more
+          patients. Many factors can impact LOS. Patient age, health status, the
+          type of procedure (or surgery), whether or not there were any
+          complications, and the size of the hospital are some common factors.
+          For further information, you can read this
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5898738/"
+            target="_blank"
+            >article</a
+          >
+        </p>
+        <!--====== Objectives ======-->
+        <h2 class="sub-heading">Objectives</h2>
+        <p class="post-text">
+          The goal for this case study will be to create a dashboard that
+          enables stakeholders to:
+        </p>
+
+        <ol class="b">
+          <li>
+            <p class="list-text">
+              Progress through key insights in a logical flow.
+            </p>
+          </li>
+          <li><p class="list-text">View informative, concise visuals</p></li>
+          <li>
+            <p class="list-text">
+              Get data they need to make business decisions for improving
+              efficiency.
+            </p>
+          </li>
+        </ol>
+
+        <!--====== Dataset ======-->
+        <h2 class="sub-heading">About Dataset</h2>
+        <p class="post-text">
+          The dataset is one single table with 30 columns and 26,594 rows. Each
+          row in the dataset represents a single inpatient stay, from their
+          admission to discharge date. The health information in this dataset is
+          not individually identifiable. This means the file does not contain
+          personal health information. <br />
+          The features of the dataset are:
+        </p>
+        <ol class="b">
+          <li>
+            <p class="list-text">
+              Health_service_area: Description of the health service area in
+              which the hospital is located (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Hospital_county: Description of the county in which the hospital
+              is located (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              Operating_certificate_number: The facility operating certificate
+              number (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              facility_id: Permanent Facility Identifier (PFI) (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              facility_name: The name of the facility where services were
+              performed based on the Permanent Facility Identifier (PFI), as
+              maintained by the NYSDOH Division of Health Facility Planning
+              (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              age_group: Age in years at time of discharge. Grouped into the
+              following age groups: 0 to 17, 18 to 29, 30 to 49, 50 to 69, and
+              70 or Older (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              zip_code_3_digits: The first three digits of the patient's zip
+              code. Blank for: - population size less than 20,000 or cell size
+              less than 10 on population. classification strata. “OOS” are Out
+              of State zip codes (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              gender: Patient gender: (M) Male, (F) Female, (U) Unknown (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              race: Black/African American, Multi, Other Race, Unknown, White.
+              Other Race includes Native Americans and Asian/Pacific Islander
+              (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              ethnicity: The ethnicity of the patient: Spanish/Hispanic Origin,
+              Not of Spanish/Hispanic Origin, Multi, Unknown (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              length_of_stay: The total number of patient days at an acute level
+              and/or other than acute care level (excluding leave of absence
+              days). (Discharge Date - Admission Date) + 1. Length of Stay
+              greater than or equal to 120 days has been aggregated to 120+ days
+              (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              type_of_admission: A description of the manner in which the
+              patient was admitted to the health care facility: Elective,
+              Emergency, Newborn, Not Available, Trauma, Urgent (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              patient_disposition: The patient's destination or status upon
+              discharge (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              discharge_year: The year (CCYY) of discharge (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              ccs_diagnosis_code: AHRQ Clinical Classification Software (CCS)
+              Diagnosis Category Code. More information on the CCS system may be
+              found at the direct
+              <a
+                href="http://www.hcup-us.ahrq.gov/toolssoftware/ccs/ccs.jsp"
+                target="_blank"
+                >link</a
+              >
+              (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              ccs_diagnosis_description: AHRQ Clinical Classification Software
+              (CCS) Diagnosis Category Description. More information on the CCS
+              system may be found at the direct
+              <a href="http://www.hcup-us.ahrq.gov/toolssoftware/ccs/ccs.jsp"
+                >link</a
+              >
+              (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              ccs_procedure_code: AHRQ Clinical Classification Software (CCS)
+              ICD-9 Procedure Category Code. More information on the CCS system
+              may be found at the direct
+              <a
+                href="http://www.hcup-us.ahrq.gov/toolssoftware/ccs/ccs.jsp"
+                target="_blank"
+                >link</a
+              >
+              (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              ccs_procedure_description: AHRQ Clinical Classification Software
+              (CCS) ICD-9 Procedure Category Description. More information on
+              the CCS system may be found at the direct
+              <a href="http://www.hcup-us.ahrq.gov/toolssoftware/ccs/ccs.jsp"
+                >link</a
+              >
+              (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_drg_code: The APR-DRG Classification Code In Calendar Year
+              2011,
+              <a
+                href="http://www.health.ny.gov/statistics/sparcs/sysdoc/appy.htm"
+                >Version 28 of the APR-DRG Grouper</a
+              >
+              . (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_drg_description: The APR-DRG Classification Code Description
+              In Calendar Year 2011,
+              <a
+                href="http://www.health.ny.gov/statistics/sparcs/sysdoc/appy.htm"
+                target="_blank"
+                >Version 28 of the APR-DRG Grouper</a
+              >
+              . (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_mdc_code: All Patient Refined Major Diagnostic Category (APR
+              MDC) Code. APR-DRG Codes 001-006 and 950-956 may group to more
+              than one MDC Code. All other APR DRGs group to one MDC category
+              (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_mdc_description: All Patient Refined Major Diagnostic Category
+              (APR MDC) Description (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_severity_of_illness_code: The APR-DRG Severity of Illness
+              Code: 1, 2, 3, 4 (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_severity_of_illness_description: All Patient Refined Severity
+              of Illness (APR SOI) Description. Minor (1), Moderate (2), Major
+              (3), Extreme (4) (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text"></p>
+          </li>
+          <li>
+            <p class="list-text">
+              apr_medical_surgical_description: The APR-DRG specific
+              classification of Medical, Surgical or Not Applicable (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              attending_provider_license_number: The professional license
+              number, issued by the New York State Department of Education, used
+              to identify the physician or other health care professional
+              primarily responsible for the care of the patient (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              operating_provider_license_number: The professional license
+              number, issued by the New York State Department of Education, used
+              to identify the physician or other health care professional who
+              performed the principal procedure (text)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              total_charges: Total charges for the discharge (number)
+            </p>
+          </li>
+          <li>
+            <p class="list-text">
+              total_costs: Total estimated costs for the discharge (number)
+            </p>
+          </li>
+        </ol>
+
+        <p class="post-text">
+          In this case study, the focus is on patients who received hip
+          replacement surgery (most of the data as shown in the figure below).
+          Here's a bit of a background on what this procedure is all about.
+          Patients with hip pain, typically arthritis, may require elective hip
+          replacement surgery. In this procedure, damaged bone and cartilage is
+          surgically removed and replaced with prosthetic components. Hospital
+          stay can range from 0 to 2 or more days. For further information you
+          can click this
+          <a
+            href="https://orthoinfo.aaos.org/en/treatment/total-hip-replacement"
+            target="_blank"
+            >link</a
+          >
+        </p>
+        <img
+          src="Procedure_description_distribution.png"
+          alt="Surgery distribution"
+          class="post-img"
+        />
+        <p class="post-text">
+          The dataset has some key attributes to analyze efficiency. Length of
+          stay measured in total days Total costs attributed to each hospital
+          stay. Here are some of the key attributes of interest for the case
+          study. These include a unique identifier for facility (facility_id), a
+          grouping of patient age (age_group), patient's disposition
+          (patient_disposition), the diagnosis description
+          (ccs_diagnosis_desposition), severity of illness
+          (apr_severity_of_illness), and risk of mortality
+          (apr_risk_of_mortality). We will closely evaluate these (and others)
+          in the case study as we work to understand what factors impact length
+          of stay and related costs.
+        </p>
+
+        <!--==== Analysis =====-->
+        <h2 class="sub-heading">Analysis Method</h2>
+        <p class="post-text">
+          The data file was transformed and processed using Power BI to ensure
+          data completeness and validity. The data was filtered to include only
+          hip replacement surgery. New columns and measures were added to help
+          with the analysis. Finally, the dashboard was created with Power BI
+          based on the template provided to help stakeholders:
+        </p>
+        <ol class="b">
+          <li>
+            <p class="list-text">
+              Progress through key insights in a logical flow.
+            </p>
+          </li>
+          <li><p class="list-text">View informative, concise visuals.</p></li>
+          <li>
+            <p class="list-text">
+              Get data they need to make business decisions for improving
+              efficiency.
+            </p>
+          </li>
+        </ol>
+
+        <!--===== Resulting Dashboard ======-->
+        <h2 class="sub-heading">Resulting Dashboard</h2>
+        <p class="post-text">The dashboard has four pages:</p>
+        <ol class="b">
+          <li>
+            <p class="sub__sub-heading">Home Page</p>
+            <img src="Home.png" alt="homp-page" class="post-img" />
+            <br />
+            <br />
+          </li>
+          <li>
+            <p class="sub__sub-heading">LOS Comparison Page</p>
+            <img
+              src="LOS-Comparison.png"
+              alt="LOS-Comparison page"
+              class="post-img"
+            />
+            <br />
+            <br />
+          </li>
+          <li>
+            <p class="sub__sub-heading">Cost Comparison</p>
+            <img
+              src="Cost-Comparison.png"
+              alt="Cost-Comparison page"
+              class="post-img"
+            />
+            <br />
+            <br />
+          </li>
+          <li>
+            <p class="sub__sub-heading">Hospital Profile</p>
+            <img
+              src="Hospital-Profile.png"
+              alt="Hospital-Profile page"
+              class="post-img"
+            />
+            <br />
+          </li>
+        </ol>
+
+        <!--====== Link to Project ======-->
+        <p class="post-link">
+          Check the project on
+          <a
+            href="https://github.com/mahmoudsamhoud/Healthcare-Analysis-with-Power-BI"
+            target="_blank"
+            ><span>GitHub</span></a
+          >
+        </p>
+      </section>
+
+      <!--===== FOOTER =====-->
+      <footer class="footer">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div>
+              <h1 class="footer__title">M.Samhoud</h1>
+              <span class="footer__subtitle"
+                >Mechanical Engineer / Data Analyst</span
+              >
+            </div>
+
+            <ul class="footer__links">
+              <li><a href="#work" class="footer__link">Work</a></li>
+              <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+
+            <div class="footer__socials">
+              <a
+                href="https://www.linkedin.com/in/mahmoudsamhoud/"
+                title="Linkedin"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/mahmoudsamhoud"
+                title="Github"
+                target="_blank"
+                class="footer__social"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
+                title="Hackerrank"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-hackerrank"></i
+              ></a>
+            </div>
+          </div>
+          <p class="footer__copy">&#169; M.Samhoud. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
