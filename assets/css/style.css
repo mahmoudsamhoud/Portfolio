@@ -262,7 +262,7 @@ input {
 }
 /*===== Home Section =====*/
 .home {
-  background: url(../img/home-bg.jpg);
+  background: url(../img/home-bg.jpeg);
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -1204,6 +1204,10 @@ td {
 
   .about__box {
     padding: 0.75rem 0.75rem;
+  }
+
+  .about__img {
+    display: none;
   }
 
   .about__description {
