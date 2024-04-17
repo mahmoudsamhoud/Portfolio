@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" href="../../img/favicon.png" type="image/x-icon" />
+    <!--========== UNICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--========== BOXICONS ==========-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>ExtruCAD</title>
+  </head>
+
+  <body>
+    <div class="post">
+      <!--===== Header =====-->
+      <header>
+        <div class="nav__post container">
+          <a href="../../../index.html" class="logo">M.S<span>amhoud</span></a>
+          <a href="../../../index.html" class="home__icon"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </div>
+      </header>
+
+      <!--===== Post Header =====-->
+      <section class="post-header">
+        <div class="header-content post-container">
+          <!--===== Post Title =====-->
+          <h1 class="header-title">Cold Extrusion Simulator</h1>
+
+          <!--======= Post Image ======-->
+          <img src="work-06.jpg" alt="pr06-img" class="header-img" />
+        </div>
+      </section>
+
+      <!--===== Post Content ======-->
+
+      <section class="post-content post-container">
+        <!--====== Introduction ======-->
+        <h2 class="sub-heading">Introduction</h2>
+        <p class="post-text">
+          Cold extrusion is a compressive forming process, also known as
+          push-through, which is carried out at room temperature using a
+          billet/slug as the starting material. During this process, the
+          deforming material undergoes deformation heating, which involves the
+          conversion of deformation work to heat at several hundred degrees. The
+          process involves applying pressure to the enclosed billet in a
+          stationary die using a punch, which can be applied partially or
+          completely as per the requirements. Based on the punch and die design
+          and the resulting material flow, cold extrusion can be classified into
+          three major processes: forward extrusion, backward extrusion, and
+          lateral extrusion.<br />
+          Click this
+          <a
+            href="https://paulmurphyplastics.com/2019/09/25/extrusion-process-working-types-application-advantages-and-disadvantages/"
+            >link</a
+          >
+          for further reading.
+        </p>
+
+        <!--====== Objectives ======-->
+        <h2 class="sub-heading">Objectives</h2>
+        <p class="post-text">
+          The objective of the project is to create a program that accurately
+          simulates calculations for cold extrusion. This program will help
+          determine the following factors:
+        </p>
+
+        <ol class="b">
+          <li><p class="list-text">tonnage required for the press</p></li>
+          <li><p class="list-text">forces acting on the workpiece</p></li>
+          <li>
+            <p class="list-text">
+              initial dimensions of the workpiece (diameter and height)
+            </p>
+          </li>
+          <li><p class="list-text">die assembly</p></li>
+        </ol>
+
+        <p class="post-text">given the following data:</p>
+
+        <ol class="b">
+          <li><p class="list-text">product type.</p></li>
+          <li><p class="list-text">workpiece material</p></li>
+          <li><p class="list-text">dimensions of the final product</p></li>
+        </ol>
+
+        <!--====== Resulting Program ======-->
+        <h2 class="sub-heading">Resulting Program</h2>
+        <p class="post-text">
+          MATLAB was used to build the program with the following GUI
+        </p>
+        <img src="gui.png" alt="GUI img" class="post-img" />
+
+        <p class="post-text">
+          The program supports 4 product types and 11 materials
+        </p>
+
+        <!--====== Supported Products ======-->
+        <h2 class="sub__sub-heading">Supported Products</h2>
+        <ol class="b">
+          <li><p class="list-text">CAN</p></li>
+          <li><p class="list-text">CAN - CAN</p></li>
+          <li><p class="list-text">ROD</p></li>
+          <li><p class="list-text">ROD - ROD</p></li>
+        </ol>
+
+        <!--====== Supported Materials ======-->
+        <h2 class="sub__sub-heading">Supported Materials</h2>
+        <ol class="b">
+          <li><p class="list-text">Al 99.5 - 99.8</p></li>
+          <li><p class="list-text">AlMgSi 1</p></li>
+          <li><p class="list-text">CuZn 37 (Ms63)</p></li>
+          <li><p class="list-text">Ck10</p></li>
+          <li><p class="list-text">Ck15</p></li>
+          <li><p class="list-text">Ck 45 / Cq 45</p></li>
+          <li><p class="list-text">Cq 22</p></li>
+          <li><p class="list-text">Cq 35</p></li>
+          <li><p class="list-text">16 MnCr 5</p></li>
+          <li><p class="list-text">42 CrMO 4</p></li>
+          <li><p class="list-text">15 CrNi 6</p></li>
+        </ol>
+
+        <!--====== Governing Equations ======-->
+        <h2 class="sub-heading">Governing Equations</h2>
+        <p class="post-text">
+          The program used idealized extrusion equations based on the fact that
+          volume remains constant.
+        </p>
+
+        <ol class="b">
+          <li>
+            <h2 class="sub__sub-heading">Nomenclature</h2>
+            <img
+              src="nomenclature.png"
+              alt="nomenclature img"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">principal Strain</h2>
+            <img
+              src="principalStrain.png"
+              alt="principal-strain equations img"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">Forces</h2>
+            <img src="force.png" alt="Force equations img" class="post-img" />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">Deformation Efficiency</h2>
+            <ul class="a">
+              <li>
+                <p class="list-text">Forward Extrusion</p>
+                <img
+                  src="deformationEfficiencyForward.png"
+                  alt="deformationEfficiencyForward img"
+                  class="post-img"
+                />
+              </li>
+              <li>
+                <p class="list-text">Backward Extrusion</p>
+                <img
+                  src="deformationEfficiencyBackward.png"
+                  alt="deformationEfficiencyBackward img"
+                  class="post-img"
+                />
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Permissible Strain</h2>
+            <img
+              src="permissibleStrain.png"
+              alt="permissibleStrain img"
+              class="post-img"
+            />
+          </li>
+        </ol>
+
+        <!--===== How the Program Works? ======-->
+        <h2 class="sub-heading">How the Program Works?</h2>
+        <ol class="b">
+          <li>
+            <h2 class="sub__sub-heading">Product selection</h2>
+            <p class="list-text">Assume CAN for example</p>
+            <img
+              src="selectProdcutType.png"
+              alt="Product-selection img"
+              class="post-img"
+            />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Material Selection</h2>
+            <p class="list-text">Select Al 99.8</p>
+            <img
+              src="selectMaterial.png"
+              alt="Materials-selection img"
+              class="post-img"
+            />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Dimensions</h2>
+            <p class="list-text">
+              As a result of the product selection, the product drawing appears
+              with the names of the dimensions. The user should input the
+              dimensions accordingly.
+            </p>
+            <img
+              src="insertDimensions.png"
+              alt="dimensions-insertion img"
+              class="post-img"
+            />
+            <br />
+            <br />
+            <p class="list-text">
+              Assume a = 50 mm, b = 40 mm, c = 20 mm, d = 5 mm
+            </p>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Getting Results</h2>
+            <p class="list-text">
+              Press the CALCULATE button to get the results.
+            </p>
+            <img
+              src="calculateresults.png"
+              alt="Press-CALCULATE img"
+              class="post-img"
+            />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Outputs</h2>
+            <img src="outputs.png" alt="outputs img" class="post-img" />
+
+            <p class="list-text">
+              Notice that the forward force is zero, which means that the
+              backward extrusion is the only feasible option. <br />
+              <br />
+            </p>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Die Assembly</h2>
+            <p class="lsit-text">
+              The user also has the option to show a sketch of the die assembly
+              corresponding to the selected product.
+            </p>
+            <img
+              src="showDieAssebly.png"
+              alt="showDieAssebly img"
+              class="post-img"
+            />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Close The Program</h2>
+            <p class="list-text">
+              After using the program, press exit button to close it
+            </p>
+            <img src="Exit.png" alt="Exit img" class="post-img" />
+          </li>
+        </ol>
+
+        <!--===== Project Link =====-->
+        <p class="post-link">
+          Check the project on
+          <a href="https://github.com/mahmoudsamhoud/ExtruCAD" target="_blank"
+            ><span>GitHub</span></a
+          >
+        </p>
+      </section>
+
+      <!--===== FOOTER =====-->
+      <footer class="footer">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div>
+              <h1 class="footer__title">M.Samhoud</h1>
+              <span class="footer__subtitle"
+                >Mechanical Engineer / Data Analyst</span
+              >
+            </div>
+
+            <ul class="footer__links">
+              <li>
+                <a href="../../../index.html#work" class="footer__link">Work</a>
+              </li>
+              <li>
+                <a href="../../../index.html#contact" class="footer__link"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <div class="footer__socials">
+              <a
+                href="https://www.linkedin.com/in/mahmoudsamhoud/"
+                title="Linkedin"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/mahmoudsamhoud"
+                title="Github"
+                target="_blank"
+                class="footer__social"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
+                title="Hackerrank"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-hackerrank"></i
+              ></a>
+            </div>
+          </div>
+          <p class="footer__copy">&#169; M.Samhoud. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
