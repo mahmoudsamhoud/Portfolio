@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link rel="icon" href="../../img/favicon.png" type="image/x-icon" />
+    <!--========== UNICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--========== BOXICONS ==========-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>Motion Analysis</title>
+  </head>
+
+  <body>
+    <div class="post">
+      <!--===== Header =====-->
+      <header>
+        <div class="nav__post container">
+          <a href="../../../index.html" class="logo">M.S<span>amhoud</span></a>
+          <a href="../../../index.html" class="home__icon"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </div>
+      </header>
+
+      <!--===== Post Header =====-->
+      <section class="post-header">
+        <div class="header-content post-container">
+          <!--===== Post Title =====-->
+          <h1 class="header-title">Inline Engine Motion Analysis</h1>
+
+          <!--======= Post Image ======-->
+          <img src="work-07.jpg" alt="pr07-img" class="header-img" />
+        </div>
+      </section>
+
+      <!--===== Post Content ======-->
+
+      <section class="post-content post-container">
+        <!--====== Introduction ======-->
+        <h2 class="sub-heading">Introduction</h2>
+        <p class="post-text">
+          The straight or inline engine is an internal combustion engine where
+          all cylinders are arranged in a single row with no offset. It is
+          commonly found in four-cylinder, six-cylinder, and eight-cylinder
+          configurations, and is used in automobiles, locomotives, and aircraft.
+          Compared to horizontally opposed or V-shaped engines, an inline engine
+          is less complicated to build because the cylinder bank and crankshaft
+          can be milled from a single metal casting, and fewer cylinder heads
+          and camshafts are required. Additionally, inline engines are more
+          compact than radial engines and can be mounted in any direction.
+          Straight engines are also simpler in design than their V-shaped
+          counterparts.
+        </p>
+        <img src="inlineEngine.png" alt="Inline-engine img" class="post-img" />
+
+        <!--====== Objectives ========-->
+        <h2 class="sub-heading">Objectives</h2>
+        <p class="post-text">
+          Performing kinematic analysis of an inline engine and comparing
+          results using SolidWorks and MATLAB in a case study.
+        </p>
+
+        <!--====== Inline Engine Mechanism ======-->
+        <h2 class="sub-heading">Inline Engine Mechanism</h2>
+        <p class="post-text">
+          Crank-slider mechanism is the main mechanism in inline engine. This
+          mechanism is used to convert rotational motion into a reciprocating
+          linear motion and vice versa. This mechanism is mainly composed of
+          three important parts:
+        </p>
+        <ul class="a">
+          <li><p class="list-text">Crank: a rotating disk</p></li>
+          <li><p class="list-text">Slider: slides on a guided plane</p></li>
+          <li>
+            <p class="list-text">
+              Connecting rod which joins the crank and the slider
+            </p>
+          </li>
+        </ul>
+        <p class="post-text">
+          The slider (piston) is pushed down from the top dead center (TDC) to
+          the bottom dead center (BDC) due to expansion of compressed air inside
+          the cylinder. TDC and BDC are the extreme positions in which the crank
+          and the connecting rod become co-linear. The distance between TDC and
+          BDC called path length. This linear motion of the piston is converted
+          to a rotational motion by the mechanism and then transferred to the
+          common crank shaft.
+        </p>
+        <img src="crankSlider.png" alt="crank slider img" class="post-img" />
+
+        <h2 class="sub-heading">Kinematic Model Equations</h2>
+        <ol class="b">
+          <li>
+            <h2 class="sub__sub-heading">Nomenclature</h2>
+            <img
+              src="Nomenclature.png"
+              alt="Nomenclature img"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">Kinematic Diagram</h2>
+            <img
+              src="KinematicDiagram.png"
+              alt="KinematicDiagram img"
+              class="post-img"
+            />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Degree of Freedom</h2>
+            <ul class="a">
+              <li><p class="list-text">Number of links (L): 4</p></li>
+              <li><p class="list-text">Number of Revolute Joints (R): 3</p></li>
+              <li>
+                <p class="list-text">Number of Prismatic Joints (P): 1</p>
+              </li>
+              <li><p class="list-text">Number of Helical Joints (H): 0</p></li>
+            </ul>
+            <p class="list-text">DoF = 3 * ( L - 1 ) - 2 R - 2 P - H</p>
+            <br />
+            <p class="list-text">
+              DoF = 3 * ( 4 - 1 ) - 2 * 3 - 2 * 1 - 0 = 1 (One actuator is
+              needed.)
+            </p>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">Position Analysis</h2>
+            <img
+              src="positionAnalysis.png"
+              alt="positionAnalysis img"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">Velocity Analysis</h2>
+            <img
+              src="velocityAnalysis.png"
+              alt="VelocityAnalysis img"
+              class="post-img"
+            />
+          </li>
+
+          <li>
+            <h2 class="sub__sub-heading">Acceleration Analysis</h2>
+            <img
+              src="accAnlysis.png"
+              alt="Acceleration analysis img"
+              class="post-img"
+            />
+          </li>
+        </ol>
+
+        <h2 class="sub-heading">Case Study</h2>
+        <p class="post-text">
+          The case that we studied is one of the two extreme positions of the
+          mechanism. When the crank and coupler are collinear as shown in the
+          following figure.
+        </p>
+        <img src="caseStudy.png" alt="caseStudy" class="post-img" />
+
+        <ol class="b">
+          <li>
+            <h2 class="sub__sub-heading">Assumptions</h2>
+            <img src="assumptions.png" alt="assumptions img" class="post-img" />
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">MATLAB Results</h2>
+            <p class="list-text">
+              A MATLAB program was built with the following GUI:
+            </p>
+            <img src="gui.png" alt="MATLAB GUI img" class="post-img" />
+            <ol class="bb">
+              <li>
+                <h2 class="sub__sub-heading">Position Analysis</h2>
+                <img
+                  src="MatlabPosition.png"
+                  alt="MatlabPosition img"
+                  class="post-img"
+                />
+              </li>
+              <li>
+                <h2 class="sub__sub-heading">Velocity Analysis</h2>
+                <img
+                  src="MatlabVelocity.png"
+                  alt="MatlabVelocity"
+                  class="post-img"
+                />
+              </li>
+              <li>
+                <h2 class="sub__sub-heading">Acceleration Analysis</h2>
+                <img src="MatlabAcc.png" alt="MatlabAcc" class="post-img" />
+              </li>
+            </ol>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">SolidWorks Results</h2>
+            <p class="list-text">
+              A 3D model of an inline engine was created and used for motion
+              study.
+            </p>
+            <img
+              src="solidAssembly.png"
+              alt="solidAssembly img"
+              class="post-img"
+            />
+            <p class="list-text">
+              Note: Solidworks can only plot specific variable versus time.
+            </p>
+
+            <ol class="bb">
+              <li>
+                <h2 class="sub__sub-heading">Position Analysis</h2>
+              </li>
+              <ul class="a">
+                <li>
+                  <p class="list-text">Slider (Piston)</p>
+                  <img
+                    src="SolidPositionPiston.png"
+                    alt="SolidPositionPiston img"
+                    class="post-img"
+                  />
+                </li>
+                <li>
+                  <p class="list-text">Coupler</p>
+                  <img
+                    src="SolidPositionCoupler.png"
+                    alt="SolidPositionCoupler img"
+                    class="post-img"
+                  />
+                </li>
+              </ul>
+              <li>
+                <h2 class="sub__sub-heading">Velocity Analysis</h2>
+              </li>
+              <ul class="a">
+                <li>
+                  <p class="list-text">Slider (piston)</p>
+                  <img
+                    src="SolidVelocityPiston.png"
+                    alt="SolidVelocityPiston img"
+                    class="post-img"
+                  />
+                </li>
+                <li>
+                  <p class="list-text">Coupler</p>
+                  <img
+                    src="SolidVelocityCoupler.png"
+                    alt="SolidVelocityCoupler img"
+                    class="post-img"
+                  />
+                </li>
+              </ul>
+              <li><h2 class="sub__sub-heading">Acceleration Analysis</h2></li>
+              <ul class="a">
+                <li>
+                  <p class="list-text">Slider (piston)</p>
+                  <img
+                    src="solidAccPiston.png"
+                    alt="SolidAccPiston img"
+                    class="post-img"
+                  />
+                </li>
+                <li>
+                  <p class="list-text">Coupler</p>
+                  <img
+                    src="solidAccCoupler.png"
+                    alt="solidAccCoupler img"
+                    class="post-img"
+                  />
+                </li>
+              </ul>
+            </ol>
+          </li>
+          <li>
+            <h2 class="sub__sub-heading">SolidWorks Vs MATLAB</h2>
+            <p class="post-text">
+              Position analysis cannot be used for comparison as the reference
+              point differs between the two models. In contrast, velocity and
+              acceleration are not dependent on reference point. we assumed that
+              the motion started at (the extreme position) θ2 = 0, t = 0. After
+              2 seconds of motion, we can calculate the instantaneous crank
+              angle as we know the angular velocity and the angular acceleration
+              are zero. And we will compare the results at this instant. (t = 2
+              sec, θ = 2π rad = 360 degree).
+            </p>
+            <ol class="bb">
+              <li><h2 class="sub__sub-heading">Velocity</h2></li>
+              <img
+                src="velocityComparison.png"
+                alt="velocityComparison img"
+                class="post-img"
+              />
+              <p class="post-text">
+                As shown in the figure, the velocity is zero at t=2sec (angle =
+                360 deg) in both models.
+              </p>
+
+              <li><h2 class="sub__sub-heading">Acceleration</h2></li>
+              <img
+                src="accComparison.png"
+                alt="accComparison img"
+                class="post-img"
+              />
+              <p class="post-text">
+                As show in the figure, the acceleration magnitude is (298
+                mm/sec^2) at t = 2sec (angle = 360 deg) in both models.
+              </p>
+            </ol>
+          </li>
+        </ol>
+
+        <h2 class="sub-heading">Conclusion</h2>
+        <p class="post-text">
+          The crank slider mechanism is a simple and efficient mechanism that is
+          widely used in various applications such as inline engines, rotary
+          engines, oscillating cylinder engines, hand pumps, and more. It
+          provides a one-degree-of-freedom mechanism, and its kinematic
+          equations can be easily solved and simulated using different software.
+          We have used Matlab and Solidworks to model this mechanism and both
+          have generated different plots. The Matlab plots depict the kinematic
+          relationships between the slider and the input crank angle, as well as
+          between the coupler and the input angle of the crank. On the other
+          hand, the Solidworks plots only show the kinematic relation versus
+          time. We have compared the plots generated by both software programs
+          in a specific case study and found that they were similar, as
+          described in the comparison section.
+        </p>
+
+        <!--===== Project Link =====-->
+        <p class="post-link">
+          Check the project on
+          <a
+            href="https://github.com/mahmoudsamhoud/Inline-Engine-Analysis"
+            target="_blank"
+            ><span>GitHub</span></a
+          >
+        </p>
+      </section>
+
+      <!--===== FOOTER =====-->
+      <footer class="footer">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div>
+              <h1 class="footer__title">M.Samhoud</h1>
+              <span class="footer__subtitle"
+                >Mechanical Engineer / Data Analyst</span
+              >
+            </div>
+
+            <ul class="footer__links">
+              <li>
+                <a href="../../../index.html#work" class="footer__link">Work</a>
+              </li>
+              <li>
+                <a href="../../../index.html#contact" class="footer__link"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <div class="footer__socials">
+              <a
+                href="https://www.linkedin.com/in/mahmoudsamhoud/"
+                title="Linkedin"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/mahmoudsamhoud"
+                title="Github"
+                target="_blank"
+                class="footer__social"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
+                title="Hackerrank"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="fa-brands fa-hackerrank"></i
+              ></a>
+            </div>
+          </div>
+          <p class="footer__copy">&#169; M.Samhoud. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
