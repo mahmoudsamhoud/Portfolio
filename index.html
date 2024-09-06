@@ -1,898 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--=============== FAVICON ===============-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
-    <!--========== UNICONS ==========-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-
-    <!--========== BOXICONS ==========-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
-    <!--========== SWIPER CSS ==========-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-
-    <!--========== MAIN CSS ==========-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>MS Portfolio</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  ======================================================== -->
   </head>
 
-  <body>
-    <!--========== SIDEBAR ==========-->
-    <div class="nav__toggle" id="nav-toggle">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <aside class="sidebar" id="sidebar">
-      <nav class="nav">
-        <div class="nav__logo">
-          <a href="index.html" class="nav__logo-text">MS</a>
-        </div>
-        <div class="nav__menu">
-          <div class="menu">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#home" class="nav__link active-link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="#about" class="nav__link">About</a>
-              </li>
+  <body class="index-page">
+    <header
+      id="header"
+      class="header d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-              <li class="nav__item">
-                <a href="#myjourney" class="nav__link">My Journey</a>
-              </li>
-
-              <li class="nav__item">
-                <a href="#skills" class="nav__link">Skills</a>
-              </li>
-              <li class="nav__item">
-                <a href="#work" class="nav__link">Work</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contact" class="nav__link">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="nav__close" id="nav-close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#about"
+              ><i class="bi bi-person navicon"></i><span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i
+              ><span>Resume</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills"
+              ><i class="bi bi-tools navicon"></i><span>Tools</span></a
+            >
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-folder-symlink navicon"></i
+              ><span>Portfolio</span></a
+            >
+          </li>
+          <!-- <li>
+            <a href="#services"
+              ><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a
+            >
+          </li> -->
+          <li>
+            <a href="#contact"
+              ><i class="bi bi-envelope navicon"></i><span>Contact</span></a
+            >
+          </li>
+        </ul>
       </nav>
-    </aside>
-    <!--========== MAIN ==========-->
+    </header>
+
     <main class="main">
-      <!--===== Home =====-->
-      <section class="home" id="home">
-        <div class="home__container container grid">
-          <div class="home__social">
-            <span class="home__social-follow">Follow Me</span>
-            <div class="home__social-links">
-              <a
-                href="https://www.linkedin.com/in/mahmoudsamhoud/"
-                title="Linkedin"
-                target="_blank"
-                class="home__social-link"
-              >
-                <i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/mahmoudsamhoud"
-                title="Github"
-                target="_blank"
-                class="home__social-link"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a
-                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
-                title="Hackerrank"
-                target="_blank"
-                class="home__social-link"
-              >
-                <i class="fa-brands fa-hackerrank"></i
-              ></a>
-            </div>
-          </div>
+      <!-- Hero Section -->
+      <section id="hero" class="hero section light-background">
+        <img src="assets/img/hero-bg.jpg" alt="Cover-img" />
 
-          <img src="assets/img/home-img.png" alt="" class="home__img" />
-
-          <div class="home__data">
-            <h1 class="home__title">Hi, I'am Mahmoud</h1>
-            <p class="home__description">
-              A Mechanical Engineer with a keen interest in programming,
-              particularly in the field of data.
-            </p>
-            <a href="#about" class="button"
-              ><i class="fa-solid fa-user button__icon"></i>More About Me</a
-            >
-          </div>
-          <div class="my__info">
-            <div class="info__item">
-              <i class="fa-regular fa-envelope info__icon"></i>
-            </div>
-            <div>
-              <h3 class="info__title">Email</h3>
-              <span class="info__subtitle">m.samhoud@hotmail.com</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--===== About =====-->
-      <section class="about section" id="about">
-        <h2 data-heading="My Intro" class="section__title">About Me</h2>
-        <div class="about__container container grid">
-          <img src="assets/img/about-img.png" alt="" class="about__img" />
-          <div class="about__data">
-            <h3 class="about__heading">
-              Hi, I'm Mahmoud Samhoud, Based in Egypt
-            </h3>
-            <p class="about__description">
-              I am a skilled mechanical engineer with a talent for utilizing
-              advanced technologies to develop innovative mechanical design
-              solutions. I have a strong command of programming languages such
-              as MATLAB, C++, and Python, and possess a solid foundation in data
-              analysis and programming. I'm passionate about integrating
-              engineering principles with state-of-the-art technology to
-              optimize product development efficiency and excellence. I'm
-              currently seeking opportunities to apply my diverse skill set and
-              contribute to dynamic teams in the fields of mechanical design and
-              data-driven engineering.
-            </p>
-            <div class="about__info grid">
-              <div class="about__box">
-                <i class="fa-solid fa-gears about__icon"></i>
-                <h3 class="about__title">Mechanical Engineering</h3>
-                <span class="about__subtitle"></span>
-              </div>
-
-              <div class="about__box">
-                <i class="fa-solid fa-magnifying-glass-chart about__icon"></i>
-                <h3 class="about__title">Data Analysis</h3>
-                <span class="about__subtitle"></span>
-              </div>
-            </div>
-            <a href="#contact" class="button"
-              ><i class="fa-solid fa-circle-arrow-right button__icon"></i
-              >Contact Me</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!--===== Qualification =====-->
-      <section class="qualification section" id="myjourney">
-        <h2 data-heading="My Journey" class="section__title">
-          Qualifications and Experience
-        </h2>
-
-        <div class="qualification__container container grid">
-          <div class="education">
-            <h3 class="qualification__title">
-              <i class="fa-solid fa-graduation-cap"></i>
-              Education
-            </h3>
-
-            <div class="timeline">
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">Datacamp</h3>
-                <p class="timeline__text">Data Scientist with Python Track</p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Jan 2022 - Jul 2022
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">Cairo University</h3>
-                <p class="timeline__text">
-                  Bachelor of Science in Mechanical Engineering
-                </p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Oct 2018 - Jul 2022
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">Cairo University</h3>
-                <p class="timeline__text">Pre-Engineering</p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Oct 2017 - Jul 2018
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience">
-            <h3 class="qualification__title">
-              <i class="fa-solid fa-briefcase"></i>
-              Experience
-            </h3>
-
-            <div class="timeline">
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">Freelancer (Remote)</h3>
-                <p class="timeline__text">Data Analyst</p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Dec 2023 - present
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">Egyptian Armed Forces</h3>
-                <p class="timeline__text">Mandatory Military Service</p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Oct 2022 - Dec 2023
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">
-                  RITEC - The Condition Monitoring Company (Egypt)
-                </h3>
-                <p class="timeline__text">
-                  Condition Monitoring and Data Analysis Intern
-                </p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Nov 2021 - Jun 2022
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">El-Marakby Steel (Egypt)</h3>
-                <p class="timeline__text">Research and Development Intern</p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Sep 2021 - Sep 2021
-                </span>
-              </div>
-
-              <div class="timeline__item">
-                <div class="circle__dot"></div>
-                <h3 class="timeline__title">EGT Academy (Egypt)</h3>
-                <p class="timeline__text">
-                  Hydraulics and Electro-Hydraulics Intern
-                </p>
-                <span class="timeline__date"
-                  ><i class="fa-regular fa-calendar-days"></i>
-                  Aug 2021 - Aug 2021
-                </span>
+        <div class="container" data-aos="zoom-out">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <h2>Mahmoud Samhoud</h2>
+              <p>
+                I'm a
+                <span
+                  class="typed"
+                  data-typed-items="Mechanical Simulation Engineer, FEA Engineer, Programmer, Freelancer"
+                  >Mechanical Simulation Engineer</span
+                ><span
+                  class="typed-cursor typed-cursor--blink"
+                  aria-hidden="true"
+                ></span>
+              </p>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/mahmoudsamhoud/"
+                  target="_blank"
+                  title="linkedIn"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a
+                  href="https://medium.com/@m.samhoud"
+                  target="_blank"
+                  title="Medium"
+                  ><i class="bi bi-medium"></i
+                ></a>
+                <a
+                  href="https://github.com/mahmoudsamhoud"
+                  target="_blank"
+                  title="GitHub"
+                  ><i class="bi bi-github"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- /Hero Section -->
 
-      <!--===== Skills =====-->
-      <section class="skills section" id="skills">
-        <h2 data-heading="My Abilities" class="section__title">My Skills</h2>
-        <div class="skills__container container grid">
-          <div class="skills__tabs">
-            <div
-              class="skills__header skills__active"
-              data-target="#mechanical"
-            >
-              <i class="fa-sharp fa-solid fa-gears skills__icon"></i>
-              <div>
-                <h1 class="skills__title">Mechanical Engineering</h1>
-                <span class="skills__subtitle"></span>
-              </div>
-              <i class="fa-solid fa-angle-down skills__arrow"></i>
-            </div>
-
-            <div class="skills__header" data-target="#programming">
-              <i class="fa-solid fa-code skills__icon"></i>
-              <div>
-                <h1 class="skills__title">Programming</h1>
-                <span class="skills__subtitle"></span>
-              </div>
-              <i class="fa-solid fa-angle-down skills__arrow"></i>
-            </div>
-
-            <div class="skills__header" data-target="#dataanalysis">
-              <i class="fa-solid fa-magnifying-glass-chart skills__icon"></i>
-              <div>
-                <h1 class="skills__title">Data Analysis</h1>
-                <span class="skills__subtitle"></span>
-              </div>
-              <i class="fa-solid fa-angle-down skills__arrow"></i>
-            </div>
-          </div>
-
-          <div class="skills__content">
-            <div
-              class="skills__group skills__active"
-              data-content
-              id="mechanical"
-            >
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">SolidWorks</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 90%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">CATIA</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Ansys</h3>
-                    <span class="skills__number">70%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 70%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">NestFab</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 90%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MATLAB</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Automation Studio</h3>
-                    <span class="skills__number">75%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 75%"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="skills__group" data-content id="programming">
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Python</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 90%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">C++</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 80%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">C Language</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MATLAB</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">HTML</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 90%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">CSS</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 80%"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="skills__group" data-content id="dataanalysis">
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Python</h3>
-                    <span class="skills__number">85%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MS Power BI</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 90%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Tableau</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 80%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MS Excel</h3>
-                    <span class="skills__number">95%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 95%"></span>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MySQL</h3>
-                    <span class="skills__number">75%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 75%"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About</h2>
         </div>
-      </section>
+        <!-- End Section Title -->
 
-      <!--===== Work =====-->
-      <section class="work section" id="work">
-        <h2 data-heading="My Portfolio" class="section__title">Recent Work</h2>
-        <div class="work__filters">
-          <span class="work__item active-work" data-filter="all">All</span>
-          <span class="work__item" data-filter=".mechanical">Mechanical</span>
-          <span class="work__item" data-filter=".programming">Programming</span>
-          <span class="work__item" data-filter=".data">Data</span>
-        </div>
-
-        <div class="work__container container grid">
-          <div class="work__card mix data">
-            <img
-              src="assets/Projects/Pr04-data/work-4.jpg"
-              alt="Pro4 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Healthcare Analysis</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">Healthcare Analysis with Power BI</h3>
-              <p class="details__description">
-                I created a dashboard that allows stakeholders to easily
-                navigate key insights, view concise visuals, and access the data
-                necessary to make informed business decisions for increased
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img src="assets/img/profile-img.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>Mechanical Design Engineer &amp; FEA Specialist.</h2>
+              <p class="py-3">
+                A highly motivated Mechanical Engineer with a robust background
+                in mechanical design and analysis. Possesses extensive
+                experience with leading CAD software, including SolidWorks and
+                CATIA, and proficient in CAE tools such as ANSYS for simulation
+                and validation of engineering solutions. Demonstrates strong
+                programming capabilities in C, C++, Python, and MATLAB, enabling
+                the development of custom engineering tools and automation of
+                complex tasks. <br />
+                <br />
+                Possesses a comprehensive understanding of mechanical systems
+                and principles, and a proven ability to apply this knowledge in
+                the design, development, and optimization of mechanical
+                components and systems. Adept at conducting thorough research,
+                performing detailed analysis, and implementing design
+                modifications to improve performance, reliability, and
                 efficiency.
+                <br />
+                <br />
+                Exhibits excellent problem-solving skills, with a keen eye for
+                detail and a commitment to delivering high-quality results.
+                Proven ability to work effectively both independently and as
+                part of a multidisciplinary team, with strong communication and
+                project management skills. Dedicated to continuous learning and
+                staying current with industry trends and advancements.
               </p>
-              <ul class="details__info">
-                <li>Created - <span>Jan 2024</span></li>
-                <li>technologies : <span>MS Power BI</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a href="assets/Projects/Pr04-data/pr04-data.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__card mix mechanical">
-            <img
-              src="assets/Projects/Pr05-mechanical/work-5.jpg"
-              alt="Pro3 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Nesting Plates</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">
-                Nesting Plates of Two Multi-Body Parts
-              </h3>
-              <p class="details__description">
-                I used NestingWorks (SolidWorks Add-in) and NestFab to nest two
-                multi-body parts with 91 parts of varying thicknesses, achieving
-                maximum utilization and minimum number of plates used.
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Sep 2021</span></li>
-                <li>technologies : <span>SolidWorks - NestFab</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a
-                      href="assets/Projects/Pr05-mechanical/pr05-mechanical.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="work__card mix mechanical programming">
-            <img
-              src="assets/Projects/Pr07-mechanical/work-07.jpg"
-              alt="Pro3 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Motion Analysis</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">Inline Engine Motion Analysis</h3>
-              <p class="details__description">
-                Created a 3D model of an inline engine and performed a kinematic
-                analysis of its mechanism using Matlab and SolidWorks.
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Feb 2020</span></li>
-                <li>technologies : <span>SolidWorks - MATLAB</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a href="assets/Projects/Pr07-mechanical/Pr07.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="work__card mix data">
-            <img
-              src="assets/Projects/Pr01-data/work-1.jpg"
-              alt="Pro1 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Sales Analysis</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">Plato's Pizza Sales Analysis</h3>
-              <p class="details__description">
-                I analyzed transaction data for Plato's Pizza Restaurant to gain
-                insights into business performance with the goal of increasing
-                sales and operational efficiency
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Dec 2023</span></li>
-                <li>technologies : <span>MySQL - MS Power BI</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a href="assets/Projects/Pr01-data/pr01-data.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__card mix mechanical programming">
-            <img
-              src="assets/Projects/Pr06-mechanical-programming/work-06.jpg"
-              alt="Pr06 img"
-              class="work__img"
-            />
-            <h3 class="work__title">ExtruCAD</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">Cold Extrusion Simulator</h3>
-              <p class="details__description">
-                I created a MATLAB program that simulates the cold extrusion
-                process for various products.
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Mar 2022</span></li>
-                <li>technologies : <span>MATLAB</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a
-                      href="assets/Projects/Pr06-mechanical-programming/Pr06-mechanical-programming.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__card mix data">
-            <img
-              src="assets/Projects/Pr02-data/work-2.jpg"
-              alt="Pro2 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Performance Anlaysis</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">Retailer Sales Analysis</h3>
-              <p class="details__description">
-                I analyzed over 2 million transactions by product, household,
-                and store to gain insights into retailer performance. This
-                analysis helped Mega Mart managers to decide whether to acquire
-                the retailer or not.
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Nov 2023</span></li>
-                <li>technologies : <span>Python</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a href="assets/Projects/Pr02-data/pr02-data.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="work__card mix data">
-            <img
-              src="assets/Projects/Pr03-data/work-3.jpg"
-              alt="Pro3 img"
-              class="work__img"
-            />
-            <h3 class="work__title">Sales Analysis</h3>
-            <span class="work__button">
-              Demo
-              <i class="fa-solid fa-arrow-right work__button-icon"></i>
-            </span>
-            <div class="portfolio__item-details">
-              <h3 class="details__title">AdvnatureWorks Sales Dashboard</h3>
-              <p class="details__description">
-                I created a dashboard using MS Power BI to help the client track
-                KPIs (sales, revenue, returns), compare regional performances,
-                analyze product-level trends and forecasts, and identify
-                high-level customers.
-              </p>
-              <ul class="details__info">
-                <li>Created - <span>Jul 2023</span></li>
-                <li>technologies : <span>MS Power BI</span></li>
-                <li>
-                  View the Project ->>>
-                  <span
-                    ><a href="assets/Projects/Pr03-data/pr03-data.html"
-                      >here</a
-                    ></span
-                  >
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>+20 106 026 0244</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Giza, Egypt</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Email:</strong> <span>m.samhoud@hotmail.com</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- /About Section -->
 
-      <!-- Portfolio Popup -->
-      <div class="portfolio__popup">
-        <div class="portfolio__popup-inner">
-          <div class="portfolio__popup-content grid">
-            <span class="portfolio__popup-close"
-              ><i class="fa-solid fa-xmark"></i
-            ></span>
-            <div class="pp__thumbnail">
-              <img
-                src="assets/img/work-1.jpg"
-                alt=""
-                class="portfolio__popup-img"
-              />
-            </div>
-            <div class="portfolio__popup-info">
-              <div class="portfolio__popup-subtitle">
-                Featured - <span>Mechanical</span>
-              </div>
-              <div class="portfolio__popup-body">
-                <h3 class="details__title">Details Title</h3>
-                <p class="details__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates, voluptas minus quas facilis ipsum corrupti, sint
-                  et nam laudantium voluptatibus est alias eaque harum! Mollitia
-                  iusto amet nihil. Eos, reprehenderit!
-                </p>
-                <ul class="details__info">
-                  <li>Created - <span>Dec 2020</span></li>
-                  <li>technologies - <span>Python - MS Power BI</span></li>
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>FEA Engineer</h4>
+                <h5>Jan 2024 - Present</h5>
+                <p><em>Freelancer </em></p>
+                <ul>
                   <li>
-                    View - <span><a href="#">www.domain.com</a></span>
+                    Utilized <strong>ANSYS</strong> for complex finite element
+                    analysis (FEA) simulations, significantly reducing prototype
+                    testing time.
+                  </li>
+                  <li>
+                    Optimized structural performance for various projects,
+                    enhancing overall product efficiency.
+                  </li>
+                  <li>
+                    Identified and resolved critical engineering issues,
+                    preventing costly rework.
+                  </li>
+                  <li>
+                    Developed detailed 3D models and engineering drawings using
+                    <strong>SolidWorks</strong> and <strong>CATIA</strong>,
+                    <strong
+                      >improving design accuracy and manufacturability</strong
+                    >.
+                  </li>
+                  <li>
+                    Collaborated effectively with cross-functional teams,
+                    improving project delivery timelines.
+                  </li>
+                  <li>
+                    Produced comprehensive simulation reports and documentation,
+                    aiding in better decision-making processes.
+                  </li>
+                  <li>
+                    Successfully managed multiple projects simultaneously,
+                    maintaining high quality and efficiency.
                   </li>
                 </ul>
               </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>Data Analyst</h4>
+                <h5>Aug 2022 - Dec 2023</h5>
+                <p><em>Freelancer </em></p>
+                <ul>
+                  <li>
+                    Analyzed large datasets using Excel, performing advanced
+                    data cleaning, transformation, and visualization to uncover
+                    actionable insights.
+                  </li>
+                  <li>
+                    Developed interactive dashboards in Power BI that provided
+                    real-time business intelligence and facilitated data-driven
+                    decision-making for clients.
+                  </li>
+                  <li>
+                    Utilized Python for data automation, building scripts to
+                    streamline repetitive tasks and enhance data processing
+                    efficiency.
+                  </li>
+                  <li>
+                    Designed and implemented complex SQL queries to extract,
+                    manipulate, and analyze data from relational databases,
+                    ensuring accurate and comprehensive reporting.
+                  </li>
+                  <li>
+                    Conducted statistical analysis and predictive modeling using
+                    Python libraries such as pandas, NumPy, and scikit-learn,
+                    providing clients with forecasts and trend analyses.
+                  </li>
+                  <li>
+                    Collaborated with clients to understand business
+                    requirements and deliver tailored data solutions that
+                    addressed specific client needs.
+                  </li>
+                  <li>
+                    Presented data findings and insights to stakeholders in a
+                    clear and concise manner, enhancing their understanding and
+                    enabling strategic planning.
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>Condition Monitoring Engineer (Intern)</h4>
+                <h5>Nov 2021 - Jul 2022</h5>
+                <p>
+                  <em>RITEC, The Condition Monitoring Co., Cairo, Egypt.</em>
+                </p>
+                <ul>
+                  <li>
+                    Utilized <strong>Python</strong> to extract and clean
+                    multiple bearing datasets for various types of
+                    <strong>rotary machines</strong>.
+                  </li>
+                  <li>
+                    Performed various <strong>vibration analyses</strong> such
+                    as <strong>FFT</strong>, <strong>Waterfall</strong>,
+                    <strong>Full Spectrum</strong>,
+                    <strong>Shaft Centre-Line Plot (SCP)</strong>,
+                    <strong>Orbit Analysis</strong>,
+                    <strong>Envelope Analysis</strong>,
+                    <strong>Power Spectrum Density (PSD)</strong>, and
+                    <strong>Cepstrum</strong> using <strong>NumPy</strong>,
+                    <strong>SciPy</strong>, and <strong>Pandas</strong>
+                  </li>
+                  <li>
+                    Visualized the resulting analysis using
+                    <strong>MatPlotlib</strong>, and
+                    <strong>Seaborn</strong> libraries and created professional
+                    reports that help vibration analysts detect a wide range of
+                    faults in many rotary machines and prevent catastrophic
+                    failures
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>R & D Mechanical Engineer (Intern)</h4>
+                <h5>Sep 2021 - Oct 2021</h5>
+                <p>
+                  <em>El-Marakby Steel, 6th of October, Egypt</em>
+                </p>
+                <ul>
+                  <li>
+                    Collaborated with the R & D team to
+                    <strong>design</strong> a three-directional
+                    <strong>hydraulic press</strong> for compressing scrap to
+                    minimize its volume to
+                    <strong>maximize furnace productivity</strong>.
+                  </li>
+                  <li>
+                    <strong>Minimized raw material waste</strong> by laying out
+                    cutting patterns using <strong>NestFab</strong> and
+                    <strong>SolidWorks</strong>.
+                  </li>
+                  <li>
+                    Modified the design of one of the cassettes which resulted
+                    in <strong>reducing downtime by 20%</strong>.
+                  </li>
+                  <li>
+                    Performed <strong>reverse engineering</strong> on a
+                    five-configuration CNC cutting tool using
+                    <strong>SolidWorks</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>Hydraulics, Electro Hydraulics Engineer (Intern)</h4>
+                <h5>Jul 2021 - Aug 2021</h5>
+                <p><em>Siemens, Cairo, Egypt</em></p>
+                <ul>
+                  <li>
+                    Built and simulated different
+                    <strong>hydraulic</strong> circuits for different
+                    <strong>mechanical mechanisms</strong> and the corresponding
+                    electrical circuits using
+                    <strong>Automation Studio</strong> and
+                    <strong>SolidWorks</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>Mechanical Engineer (Intern)</h4>
+                <h5>Jul 2020 - Aug 2020</h5>
+                <p>
+                  <em
+                    >North Cairo for Electricity Distribution, Cairo, Egypt</em
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Analyzed and understood the working principle of both steam
+                    and gas power plants.
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
             </div>
-          </div>
-        </div>
-      </div>
-      <!--===== Services =====-->
 
-      <!--===== Testimonials =====-->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <!-- Edn Resume Item -->
 
-      <!--===== Contact =====-->
-      <section class="contact section" id="contact">
-        <h2 data-heading="Let's talk" class="section__title">Contact Me</h2>
-        <div class="contact__container container grid">
-          <div class="contact__content">
-            <form action="" class="contact__form" id="contact-form">
-              <div class="input__container">
-                <input type="text" name="user_name" required class="input" />
-                <label for="">Full Name</label>
-                <span>Full Name</span>
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Data Science with Python</h4>
+                <h5>Jan 2022 - Jul 2022</h5>
+                <p><em>Datacamp</em></p>
+                <p>
+                  A 97-hour rigorous program designed to build essential data
+                  science skills. Acquired proficiency in
+                  <strong>Python</strong> for <strong>data analysis</strong>,
+                  <strong>data manipulation</strong>, and
+                  <strong>data visualization</strong>. Mastered key libraries
+                  such as <strong>pandas</strong>, <strong>NumPy</strong>,
+                  <strong>Matplotlib</strong>, and <strong>Seaborn</strong>.
+                  Gained hand s-on experience with
+                  <strong>machine learning</strong> techniques using
+                  <strong>scikit-learn</strong>, including
+                  <strong>regression</strong>, <strong>classification</strong>,
+                  and <strong>clustering</strong>. Developed skills in
+                  <strong>data cleaning</strong>,
+                  <strong>statistical analysis</strong>, and
+                  <strong>predictive modeling</strong>. Worked on real-world
+                  projects to apply data science techniques and enhance
+                  <strong>problem-solving</strong> abilities.
+                </p>
               </div>
+              <!-- Edn Resume Item -->
 
-              <div class="input__container">
-                <input type="email" name="user_email" required class="input" />
-                <label for="">Email</label>
-                <span>Email</span>
+              <div class="resume-item">
+                <h4>BSc in Mechanical Design & Production Engineering</h4>
+                <h5>Oct 2018 - Jul 2022</h5>
+                <p><em>Faculty of Engineering, Cairo University</em></p>
+                <p>
+                  A comprehensive four-year program, Providing in-depth
+                  knowledge and practical skills in the <strong>design</strong>,
+                  <strong>analysis</strong>, and
+                  <strong>optimization</strong> of different
+                  <strong>mechanical systems</strong>. The curriculum covered
+                  core subjects such as <strong>materials science</strong>,
+                  <strong>stress analysis</strong>,
+                  <strong>solid mechanics</strong>, <strong>dynamics</strong>,
+                  <strong>automation</strong>,
+                  <strong>mechanical vibrations</strong>,
+                  <strong>thermodynamics</strong>, and,
+                  <strong>fluid mechanics</strong>. Gained hands-on experience
+                  with advanced CAD software (<strong>SolidWorks</strong>,
+                  <strong>CATIA</strong>) and CAE tools (<strong>ANSYS</strong>)
+                  for simulation and analysis. Developed strong programming
+                  skills in <strong>C++</strong>, <strong>Python</strong>, and
+                  <strong>MATLAB</strong>. Engaged in multiple design projects
+                  and internships, enhancing
+                  <strong>problem-solving</strong> abilities,
+                  <strong>teamwork</strong>, and
+                  <strong>project management</strong> skills.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Grade</strong> :
+                    <strong>Very Good with Honor (Ranked 5th)</strong>.
+                  </li>
+                  <li>
+                    <strong>Relevant Coursework</strong>: >Mechanical Design,
+                    Stress Analysis, Structure Mechanics, Material Science,
+                    Welding, Theories of Cutting, Metal Forming, Mechanical
+                    Failure Analysis, Finite Element Analysis
+                  </li>
+                </ul>
               </div>
+              <!-- Edn Resume Item -->
 
-              <div class="input__container textarea">
-                <textarea
-                  name="user_message"
-                  id="message"
-                  required
-                  class="input"
-                ></textarea>
-                <label for="">Message</label>
-                <span>Message</span>
+              <div class="resume-item">
+                <h4>Pre-Engineering</h4>
+                <h5>Oct 2017 - Jul 2018</h5>
+                <p><em>Faculty of Engineering, Cairo University</em></p>
+                <p>
+                  A one-year comprehensive Pre-Engineering Program, providing a
+                  strong foundation in <strong>mathematics</strong>,
+                  <strong>science</strong>, and
+                  <strong>engineering fundamentals</strong>. The program
+                  included coursework in <strong>algebra</strong>,
+                  <strong>calculus</strong>, <strong>physics</strong>, and
+                  <strong>chemistry</strong>, along with introductory
+                  engineering principles such as <strong>mechanics</strong> and
+                  <strong>electrical</strong> <strong>circuits</strong>. Gained
+                  proficiency in <strong>CAD software</strong> and
+                  <strong>programming languages</strong>, developed
+                  <strong>problem-solving</strong> and
+                  <strong>critical thinking</strong> skills through hands-on
+                  projects, and enhanced <strong>teamwork</strong> and
+                  <strong>communication abilities</strong>.
+                </p>
               </div>
-              <p class="contact__message" id="contact-message"></p>
-              <button type="submit" class="button">
-                <i class="fa-solid fa-circle-arrow-right button__icon"></i>
-                Send Message
-              </button>
-            </form>
+              <!-- Edn Resume Item -->
+            </div>
           </div>
         </div>
       </section>
-      <!--===== FOOTER =====-->
-      <footer class="footer">
-        <div class="footer__bg">
-          <div class="footer__container container grid">
-            <div>
-              <h1 class="footer__title">M.Samhoud</h1>
-              <span class="footer__subtitle"
-                >Mechanical Engineer / Data Analyst</span
-              >
+      <!-- /Resume Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Tools & Skills</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row skills-content skills-animation">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>SolidWorks</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>CATIA</span> <i class="val">85%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>ANSYS</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>NestFab</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Automation Studio</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>MATLAB</span> <i class="val">85%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
             </div>
 
-            <ul class="footer__links">
-              <li><a href="#work" class="footer__link">Work</a></li>
-              <li><a href="#contact" class="footer__link">Contact</a></li>
-            </ul>
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>Python</span> <i class="val">85%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
 
-            <div class="footer__socials">
-              <a
-                href="https://www.linkedin.com/in/mahmoudsamhoud/"
-                title="Linkedin"
-                target="_blank"
-                class="footer__social"
-              >
-                <i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/mahmoudsamhoud"
-                title="Github"
-                target="_blank"
-                class="footer__social"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a
-                href="https://www.hackerrank.com/profile/mahmoudsamhoud0"
-                title="Hackerrank"
-                target="_blank"
-                class="footer__social"
-              >
-                <i class="fa-brands fa-hackerrank"></i
-              ></a>
+              <div class="progress">
+                <span class="skill"
+                  ><span>C++</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>C</span> <i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>SQL & MySQL</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>HTML & CSS</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>MS Power BI</span> <i class="val">85%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
             </div>
           </div>
-          <p class="footer__copy">&#169; M.Samhoud. All rights reserved</p>
         </div>
-      </footer>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>Explore my recent work.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-mech">Mechanical</li>
+              <li data-filter=".filter-prog">Programming</li>
+              <li data-filter=".filter-data">Data</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mech filter-prog"
+              >
+                <img
+                  src="assets/projects/Pr06-mech-prog/work-06.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>ExtruCAD</h4>
+                  <p>Cold Extrusion Simulator</p>
+                  <a
+                    href="assets/projects/Pr06-mech-prog/gui.png"
+                    title="Cold Extrusion Simulator"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr06-mech-prog/work-06.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mech filter-prog"
+              >
+                <img
+                  src="assets/projects/Pr07-mech/work-07.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Motion Analysis</h4>
+                  <p>Inline-Engine Motion Analysis</p>
+                  <a
+                    href="assets/projects/Pr07-mech/gui.png"
+                    title="Inline-Engine Motion Analysis"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr07-mech/work-07.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mech"
+              >
+                <img
+                  src="assets/projects/Pr05-mech/BalerBodyRightSideMesh.PNG"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Nesting Plates</h4>
+                  <p>Nesting Plates of Two Multi-Body Parts</p>
+                  <a
+                    href="assets/projects/Pr05-mech/BalerBodyRightSideMesh.PNG"
+                    title="Nesting Plates of Two Multi-Body Parts"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr05-mech/work-05.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data"
+              >
+                <img
+                  src="assets/projects/Pr04-data/work-4.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Efficiency Analysis</h4>
+                  <p>Hospital Efficiency Analysis</p>
+                  <a
+                    href="assets/projects/Pr04-data/work-4.jpeg"
+                    title="Hospital Efficiency Analysis"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr04-data/work-04.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data"
+              >
+                <img
+                  src="assets/projects/Pr03-data/work-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Sales Analysis</h4>
+                  <p>AdvnatureWorks Sales Dashboard</p>
+                  <a
+                    href="assets/projects/Pr03-data/work-3.jpg"
+                    title="AdvnatureWorks Sales Dashboard"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr03-data/work-03.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data"
+              >
+                <img
+                  src="assets/projects/Pr02-data/work-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Performance Analysis</h4>
+                  <p>Retailer Performance Analysis</p>
+                  <a
+                    href="assets/projects/Pr02-data/work-2.jpg"
+                    title="Retailer Sales Analysis"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr02-data/work-02.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data"
+              >
+                <img
+                  src="assets/projects/Pr01-data/work-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Sales Analysis</h4>
+                  <p>Plato's Pizza Sales Analysis</p>
+                  <a
+                    href="assets/projects/Pr01-data/work-1.jpg"
+                    title="Plato's Pizza Sales Analysis"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="assets/projects/Pr01-data/work-01.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Let's connect and explore how we can achieve great results together.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <div
+                class="info-item d-flex"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Me</h3>
+                  <p>+20 106 026 0244</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div
+                class="info-item d-flex"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Me</h3>
+                  <p>m.samhoud@hotmail.com</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+            </div>
+
+            <div class="col-lg-8">
+              <form
+                action=""
+                class="php-email-form"
+                id="contact-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required
+                      autocomplete="given-name"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      autocomplete="family-name"
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="6"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+              <div class="sent-message text-center" id="contact-message"></div>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
     </main>
 
-    <!--========== SCROLL UP ==========-->
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <h3 class="sitename">Mahmoud Samhoud</h3>
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.linkedin.com/in/mahmoudsamhoud/"
+            target="_blank"
+            title="linkedIn"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://medium.com/@m.samhoud" target="_blank" title="Medium"
+            ><i class="bi bi-medium"></i
+          ></a>
+          <a
+            href="https://github.com/mahmoudsamhoud"
+            target="_blank"
+            title="GitHub"
+            ><i class="bi bi-github"></i
+          ></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Mahmoud Samhoud</strong>
+            <span>All Rights Reserved</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    <!--========== MIXITUP FILTER ==========-->
-    <script src="assets/js/mixitup.min.js"></script>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-    <!--========== SWIPER JS ==========-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-    <!--========== MAIN JS ==========-->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
     <!--=============== EMAIL JS ===============-->
+    <script src="assets/vendor/php-email-form/connect.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </body>
 </html>
