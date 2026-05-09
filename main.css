@@ -1,0 +1,285 @@
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors */
+:root {
+  --background-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #45505b;
+  --accent-color: #0563bb;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# General Styling
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Button Styles
+--------------------------------------------------------------*/
+.view-report-btn {
+  padding: 8px 40px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.view-report-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+/* Remove the old details-link styles since we removed those elements */
+.details-link {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .skill-category {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .skill-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transition: all 0.3s ease;
+}
+
+.skills .cad-cae::before {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+}
+
+.skills .programming::before {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.skills .other-tools::before {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+}
+
+.skills .skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skills .category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.skills .category-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.skills .category-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2c4964;
+}
+
+.skills .skill-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills .skill-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.skills .skill-card:hover {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateX(5px);
+}
+
+.skills .skill-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.skills .skill-info {
+  flex: 1;
+}
+
+.skills .skill-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #2c4964;
+}
+
+.skills .skill-level {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skills .skill-level-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+.skills .cad-cae .skill-level-bar {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+}
+
+.skills .programming .skill-level-bar {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.skills .other-tools .skill-level-bar {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+}
+
+@media (max-width: 768px) {
+  .skills .skill-category {
+    margin-bottom: 30px;
+  }
+
+  .skills .skill-card {
+    padding: 12px;
+  }
+
+  .skills .skill-img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Skills Section Grid Styles */
+.skills.section {
+  background: #181c24;
+  padding: 60px 0 40px 0;
+}
+
+.skills .section-title h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.skill-icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2d8cf0 0%, #6c63ff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(44, 73, 100, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.skill-icon-circle img {
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.skill-icon-circle:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44, 73, 100, 0.25);
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    gap: 18px;
+  }
+  .skill-icon-circle {
+    width: 60px;
+    height: 60px;
+    padding: 6px;
+  }
+  .skill-icon-circle img {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -241,4 +241,123 @@
   }
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
+
+  // Project Modals
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all modal triggers
+    const modalTriggers = document.querySelectorAll(
+      ".preview-link, .details-link"
+    );
+    const modals = document.querySelectorAll(".modal");
+    const closeButtons = document.querySelectorAll(".close-modal");
+
+    // Function to open modal
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      }
+    }
+
+    // Function to close modal
+    function closeModal(modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = ""; // Restore background scrolling
+    }
+
+    // Add click event listeners to modal triggers
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        const projectId = this.getAttribute("data-project");
+        openModal(projectId);
+      });
+    });
+
+    // Add click event listeners to close buttons
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const modal = this.closest(".modal");
+        closeModal(modal);
+      });
+    });
+
+    // Close modal when clicking outside
+    modals.forEach((modal) => {
+      modal.addEventListener("click", function (e) {
+        if (e.target === this) {
+          closeModal(this);
+        }
+      });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        modals.forEach((modal) => {
+          if (modal.style.display === "block") {
+            closeModal(modal);
+          }
+        });
+      }
+    });
+  });
+
+  // Reading Progress Bar
+  function initReadingProgress() {
+    const progressBar = document.querySelector(".reading-progress-bar");
+    if (!progressBar) return;
+
+    function updateProgress() {
+      const windowHeight = window.innerHeight;
+      const documentHeight =
+        document.documentElement.scrollHeight - windowHeight;
+      const scrolled = window.scrollY;
+      const progress = (scrolled / documentHeight) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    updateProgress(); // Initial update
+  }
+
+  // Initialize reading progress bar when DOM is loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    initReadingProgress();
+  });
+
+  // Skills section filters
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".skill-filter");
+    const filterableTools = document.querySelectorAll(".filterable-tool");
+    const categoryGroups = document.querySelectorAll(".skills-category-group");
+
+    if (!filterButtons.length || !filterableTools.length) return;
+
+    function applySkillsFilter(selectedFilter) {
+      filterableTools.forEach((tool) => {
+        const categories =
+          tool.getAttribute("data-categories")?.split(",").map((cat) => cat.trim()) || [];
+        const matches = selectedFilter === "all" || categories.includes(selectedFilter);
+        tool.classList.toggle("is-hidden", !matches);
+      });
+
+      categoryGroups.forEach((group) => {
+        const visibleTools = group.querySelectorAll(".filterable-tool:not(.is-hidden)");
+        group.classList.toggle("is-hidden", visibleTools.length === 0);
+      });
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        applySkillsFilter(button.getAttribute("data-filter"));
+      });
+    });
+
+    applySkillsFilter("all");
+  });
 })();
