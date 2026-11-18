@@ -1,0 +1,7 @@
+@import url("../vendor/bootstrap/css/bootstrap.min.css");
+@import url("main.css");
+.post { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+.post img { max-width: 100%; height: auto; }
+.nav__post { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
+.header-title, .sub-heading { margin: 2rem 0 1rem; }
+.post p, .post li { line-height: 1.8; }

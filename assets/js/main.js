@@ -43,7 +43,9 @@
     const label = `Switch to ${nextTheme} theme`;
 
     document
-      .querySelectorAll("[data-theme-toggle], .theme-toggle-btn, .theme-toggle-fixed")
+      .querySelectorAll(
+        "[data-theme-toggle], .theme-toggle-btn, .theme-toggle-fixed",
+      )
       .forEach((button) => {
         button.setAttribute("aria-label", label);
         button.setAttribute("title", label);
@@ -58,6 +60,14 @@
   function setTheme(theme, shouldStore) {
     docEl.setAttribute("data-theme", theme);
     docEl.style.colorScheme = theme;
+
+    const heroCover = document.getElementById("hero-cover");
+    if (heroCover) {
+      heroCover.src =
+        theme === "dark"
+          ? "assets/img/Cover/portfolio-dark-v3.jpg"
+          : "assets/img/Cover/portfolio-light-v3.jpg";
+    }
 
     if (shouldStore) {
       storeTheme(theme);
@@ -86,14 +96,16 @@
     setTheme(getPreferredTheme(), false);
 
     document
-      .querySelectorAll("[data-theme-toggle], .theme-toggle-btn, .theme-toggle-fixed")
+      .querySelectorAll(
+        "[data-theme-toggle], .theme-toggle-btn, .theme-toggle-fixed",
+      )
       .forEach((button) => {
         button.addEventListener("click", () => {
-          const currentTheme = docEl.getAttribute("data-theme") === "dark" ? "dark" : "light";
+          const currentTheme =
+            docEl.getAttribute("data-theme") === "dark" ? "dark" : "light";
           setTheme(currentTheme === "dark" ? "light" : "dark", true);
         });
       });
-
   }
 
   initThemeToggle();
@@ -108,6 +120,7 @@
     if (!header || !headerToggleBtn) return;
 
     header.classList.toggle("header-show");
+    headerToggleBtn.setAttribute("aria-expanded", String(header.classList.contains("header-show")));
     headerToggleBtn.classList.toggle("bi-list");
     headerToggleBtn.classList.toggle("bi-x");
   }
@@ -140,13 +153,59 @@
   });
 
   /**
-   * Preloader
+   * Preloader & hero entrance animations
    */
   const preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
+
+  function initHeroEntranceAnimations() {
+    preloader?.remove();
+
+    const tagline = document.querySelector(".hero-tagline");
+    const heroCta = document.querySelector(".hero-cta");
+    const mottoWords = document.querySelectorAll(".hero-motto-word");
+
+    window.setTimeout(() => {
+      tagline?.classList.add("is-visible");
+    }, 300);
+
+    window.setTimeout(() => {
+      heroCta?.classList.add("is-visible");
+    }, 500);
+
+    mottoWords.forEach((word, index) => {
+      window.setTimeout(
+        () => {
+          word.classList.add("is-visible");
+        },
+        700 + index * 400,
+      );
     });
+
+    if (!mottoWords.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const slideUpDone = 700 + (mottoWords.length - 1) * 400 + 600;
+    const animDuration = 1400;
+    const stagger = 1500;
+    function cycleHighlights() {
+      mottoWords.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.remove("is-highlight");
+          void word.offsetWidth;
+          word.classList.add("is-highlight");
+        }, i * stagger);
+      });
+    }
+
+    setTimeout(() => {
+      cycleHighlights();
+      setInterval(cycleHighlights, (mottoWords.length - 1) * stagger + animDuration);
+    }, slideUpDone);
+  }
+
+  if (document.readyState === "complete") {
+    initHeroEntranceAnimations();
+  } else {
+    window.addEventListener("load", initHeroEntranceAnimations);
   }
 
   /**
@@ -245,49 +304,58 @@
    * Init isotope layout and filters
    */
   if (window.imagesLoaded && window.Isotope) {
-    document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
-      const layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
-      const filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
-      const sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
+    document
+      .querySelectorAll(".isotope-layout")
+      .forEach(function (isotopeItem) {
+        const layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+        const filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+        const sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
 
-      let initIsotope;
-      imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
-        initIsotope = new Isotope(isotopeItem.querySelector(".isotope-container"), {
-          itemSelector: ".isotope-item",
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort,
-        });
+        let initIsotope;
+        imagesLoaded(
+          isotopeItem.querySelector(".isotope-container"),
+          function () {
+            initIsotope = new Isotope(
+              isotopeItem.querySelector(".isotope-container"),
+              {
+                itemSelector: ".isotope-item",
+                layoutMode: layout,
+                filter: filter,
+                sortBy: sort,
+              },
+            );
+          },
+        );
+
+        isotopeItem
+          .querySelectorAll(".isotope-filters li")
+          .forEach(function (filters) {
+            filters.addEventListener(
+              "click",
+              function () {
+                const activeFilter = isotopeItem.querySelector(
+                  ".isotope-filters .filter-active",
+                );
+
+                if (activeFilter) {
+                  activeFilter.classList.remove("filter-active");
+                }
+
+                this.classList.add("filter-active");
+                isotopeItem.querySelectorAll(".isotope-filters [data-filter]").forEach(filter => filter.setAttribute("aria-pressed", String(filter === this)));
+
+                if (initIsotope) {
+                  initIsotope.arrange({
+                    filter: this.getAttribute("data-filter"),
+                  });
+                }
+
+                aosInit();
+              },
+              false,
+            );
+          });
       });
-
-      isotopeItem
-        .querySelectorAll(".isotope-filters li")
-        .forEach(function (filters) {
-          filters.addEventListener(
-            "click",
-            function () {
-              const activeFilter = isotopeItem.querySelector(
-                ".isotope-filters .filter-active"
-              );
-
-              if (activeFilter) {
-                activeFilter.classList.remove("filter-active");
-              }
-
-              this.classList.add("filter-active");
-
-              if (initIsotope) {
-                initIsotope.arrange({
-                  filter: this.getAttribute("data-filter"),
-                });
-              }
-
-              aosInit();
-            },
-            false
-          );
-        });
-    });
   }
 
   /**
@@ -321,7 +389,7 @@
   window.addEventListener("load", function () {
     if (!window.location.hash) return;
 
-    const section = document.querySelector(window.location.hash);
+    const section = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
     if (!section) return;
 
     setTimeout(() => {
@@ -342,7 +410,7 @@
     navmenulinks.forEach((navmenulink) => {
       if (!navmenulink.hash) return;
 
-      const section = document.querySelector(navmenulink.hash);
+      const section = document.getElementById(decodeURIComponent(navmenulink.hash.slice(1)));
       if (!section) return;
 
       const position = window.scrollY + 200;
@@ -362,18 +430,30 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 
+  document.querySelectorAll(".isotope-filters [data-filter]").forEach(filter => {
+    filter.setAttribute("aria-pressed", String(filter.classList.contains("filter-active")));
+    filter.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); filter.click(); }
+    });
+  });
+
   // Project Modals
   document.addEventListener("DOMContentLoaded", function () {
     const modalTriggers = document.querySelectorAll(
-      ".preview-link, .details-link"
+      ".portfolio-item[data-project]",
     );
     const modals = document.querySelectorAll(".modal");
     const closeButtons = document.querySelectorAll(".close-modal");
 
+    let previousFocus;
+    let previousOverflow;
     function openModal(modalId) {
       const modal = document.getElementById(modalId);
       if (modal) {
+        previousFocus = document.activeElement;
+        previousOverflow = document.body.style.overflow;
         modal.style.display = "block";
+        modal.querySelector(".close-modal")?.focus();
         document.body.style.overflow = "hidden";
       }
     }
@@ -382,10 +462,14 @@
       if (!modal) return;
 
       modal.style.display = "none";
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow || "";
+      previousFocus?.focus();
     }
 
     modalTriggers.forEach((trigger) => {
+      trigger.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.click(); }
+      });
       trigger.addEventListener("click", function (e) {
         const projectId = this.getAttribute("data-project");
         if (!projectId) return;
@@ -410,6 +494,15 @@
     });
 
     document.addEventListener("keydown", function (e) {
+      // A native image dialog owns focus and Escape while it is above a project.
+      if (document.querySelector(".project-image-viewer[open]")) return;
+      const open = Array.from(modals).find(modal => modal.style.display === "block");
+      if (open && e.key === "Tab") {
+        const items = Array.from(open.querySelectorAll("button, a[href], input, textarea, [tabindex='0']"));
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && (document.activeElement === first || !open.contains(document.activeElement))) { e.preventDefault(); last?.focus(); }
+        else if (!e.shiftKey && (document.activeElement === last || !open.contains(document.activeElement))) { e.preventDefault(); first?.focus(); }
+      }
       if (e.key === "Escape") {
         modals.forEach((modal) => {
           if (modal.style.display === "block") {
@@ -417,6 +510,63 @@
           }
         });
       }
+    });
+  });
+
+  // Enlarge project images without navigating away from their report or popup.
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(
+      ".modal .project-gallery img, .project-report figure img, .orbit-case figure img",
+    );
+    if (!images.length) return;
+    const viewer = document.createElement("dialog");
+    viewer.className = "project-image-viewer";
+    viewer.setAttribute("aria-label", "Project image preview");
+    viewer.innerHTML = '<button type="button" class="image-viewer-close" aria-label="Close image preview">Close <span aria-hidden="true">×</span></button><figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(viewer);
+    const largeImage = viewer.querySelector("img");
+    const caption = viewer.querySelector("figcaption");
+    const close = viewer.querySelector("button");
+    let opener;
+    let overflowBefore;
+
+    images.forEach(image => {
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "image-preview-trigger";
+      trigger.setAttribute("aria-label", `Open image: ${image.alt || "Project screenshot"}`);
+      trigger.setAttribute("aria-haspopup", "dialog");
+      const link = image.parentElement.tagName === "A" ? image.parentElement : null;
+      if (link) {
+        link.replaceWith(trigger);
+      } else {
+        image.before(trigger);
+      }
+      trigger.appendChild(image);
+      trigger.addEventListener("click", () => {
+        opener = trigger;
+        overflowBefore = document.body.style.overflow;
+        largeImage.src = image.currentSrc || image.src;
+        largeImage.alt = image.alt;
+        caption.textContent = image.alt || "Project image";
+        document.body.style.overflow = "hidden";
+        viewer.showModal();
+        close.focus({ preventScroll: true });
+      });
+    });
+
+    close.addEventListener("click", () => viewer.close());
+    viewer.addEventListener("click", event => {
+      if (event.target === viewer) viewer.close();
+    });
+    viewer.addEventListener("cancel", event => {
+      event.preventDefault();
+      viewer.close();
+    });
+    viewer.addEventListener("close", () => {
+      document.body.style.overflow = overflowBefore || "";
+      largeImage.removeAttribute("src");
+      opener?.focus({ preventScroll: true });
     });
   });
 
@@ -430,7 +580,8 @@
       const documentHeight =
         document.documentElement.scrollHeight - windowHeight;
       const scrolled = window.scrollY;
-      const progress = documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
+      const progress =
+        documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
       progressBar.style.width = `${progress}%`;
     }
 
@@ -440,43 +591,4 @@
   }
 
   document.addEventListener("DOMContentLoaded", initReadingProgress);
-
-  // Skills section filters
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".skill-filter");
-    const filterableTools = document.querySelectorAll(".filterable-tool");
-    const categoryGroups = document.querySelectorAll(".skills-category-group");
-
-    if (!filterButtons.length || !filterableTools.length) return;
-
-    function applySkillsFilter(selectedFilter) {
-      filterableTools.forEach((tool) => {
-        const categories =
-          tool
-            .getAttribute("data-categories")
-            ?.split(",")
-            .map((cat) => cat.trim()) || [];
-        const matches =
-          selectedFilter === "all" || categories.includes(selectedFilter);
-        tool.classList.toggle("is-hidden", !matches);
-      });
-
-      categoryGroups.forEach((group) => {
-        const visibleTools = group.querySelectorAll(
-          ".filterable-tool:not(.is-hidden)"
-        );
-        group.classList.toggle("is-hidden", visibleTools.length === 0);
-      });
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-        applySkillsFilter(button.getAttribute("data-filter"));
-      });
-    });
-
-    applySkillsFilter("all");
-  });
 })();

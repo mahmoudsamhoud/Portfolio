@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>MS Portfolio</title>
-    <meta content="" name="description" />
+    <meta content="Mahmoud Samhoud — Mechanical Simulation and Static Equipment Engineer. Explore mechanical engineering, simulation, and engineering software projects." name="description" />
     <meta content="" name="keywords" />
 
     <script src="assets/js/theme-init.js"></script>
@@ -38,75 +38,69 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/main.css?v=gallery-20261118" rel="stylesheet" />
+    <link href="assets/css/modern.css" rel="stylesheet" />
 
     <!-- =======================================================
   ======================================================== -->
   </head>
 
   <body class="index-page">
-    <header
-      id="header"
-      class="header d-flex flex-column justify-content-center"
-    >
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-
-      <nav id="navmenu" class="navmenu">
+    <a class="skip-link" href="#portfolio">Skip to projects</a>
+    <header id="header" class="header portfolio-header">
+      <button type="button" class="header-toggle bi bi-list" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navmenu"></button>
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
         <ul>
-          <li>
-            <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i><span>Home</span></a
-            >
-          </li>
-          <li>
-            <a href="#about"
-              ><i class="bi bi-person navicon"></i><span>About</span></a
-            >
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i
-              ><span>Resume</span></a
-            >
-          </li>
-          <li>
-            <a href="#skills"
-              ><i class="bi bi-tools navicon"></i><span>Tools</span></a
-            >
-          </li>
-          <!-- <li>
-            <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a
-            >
-          </li> -->
-          <li>
-            <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i><span>Contact</span></a
-            >
-          </li>
+          <li><a href="#hero" aria-label="Home" title="Home"><i class="bi bi-house navicon" aria-hidden="true"></i><span>Home</span></a></li>
+          <li><a href="#about" aria-label="About" title="About"><i class="bi bi-person navicon" aria-hidden="true"></i><span>About</span></a></li>
+          <li><a href="#resume" aria-label="Experience" title="Experience"><i class="bi bi-file-earmark-text navicon" aria-hidden="true"></i><span>Experience</span></a></li>
+          <li><a href="#skills" aria-label="Tools" title="Tools"><i class="bi bi-tools navicon" aria-hidden="true"></i><span>Tools</span></a></li>
+          <li><a href="#portfolio" aria-label="Projects" title="Projects"><i class="bi bi-images navicon" aria-hidden="true"></i><span>Projects</span></a></li>
+          <li><a href="#contact" aria-label="Contact" title="Contact"><i class="bi bi-envelope navicon" aria-hidden="true"></i><span>Contact</span></a></li>
         </ul>
       </nav>
     </header>
+      <button type="button" class="header-theme" data-theme-toggle aria-label="Switch to dark theme"><i class="bi bi-sun icon-light" aria-hidden="true"></i><i class="bi bi-moon-stars icon-dark" aria-hidden="true"></i></button>
 
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section light-background">
-        <img src="assets/img/Cover.png" alt="Cover-img" />
+        <img
+          id="hero-cover"
+          width="1672" height="941" fetchpriority="high"
+          src="assets/img/Cover/portfolio-light-v3.jpg"
+          alt=""
+        />
 
         <div class="container" data-aos="zoom-out">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <h2>Mahmoud Samhoud</h2>
-              <p>
+          <div class="row">
+            <div class="col-lg-8">
+              <h1>Mahmoud<br />Samhoud<span class="name-dot">.</span></h1>
+<p class="hero-role">
                 I'm a
                 <span
                   class="typed"
-                  data-typed-items="Mechanical Engineer, Static Equipment Engineer, Structural Simulation Engineer, Data Analyst, Freelancer"
-                  >Mechanical Engineer</span
+                  data-typed-items="Mechanical Simulation Engineer, Static Equipment Engineer, Freelancer"
+                  >Mechanical Simulation Engineer</span
                 ><span
                   class="typed-cursor typed-cursor--blink"
                   aria-hidden="true"
                 ></span>
+              </p>
+<p class="hero-tagline">
+                Predicting failure, optimizing performance, and validating
+                designs through high-fidelity mechanical simulation.
+              </p>
+
+              <div class="hero-actions"><a href="#portfolio" class="hero-cta">Explore my projects <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a><a href="#resume" class="text-link">My experience <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
+
+
+<p class="hero-motto" aria-label="Design, Simulate, Automate, Validate, Deliver">
+                <span class="hero-motto-word">Design</span>
+                <span class="hero-motto-word">Simulate</span>
+                <span class="hero-motto-word">Automate</span>
+                <span class="hero-motto-word">Validate</span>
+                <span class="hero-motto-word">Deliver</span>
               </p>
               <div class="social-links">
                 <a
@@ -115,81 +109,134 @@
                   title="linkedIn"
                   ><i class="bi bi-linkedin"></i
                 ></a>
-                <a
-                  href="https://medium.com/@m.samhoud"
-                  target="_blank"
-                  title="Medium"
-                  ><i class="bi bi-medium"></i
-                ></a>
+
                 <a
                   href="https://github.com/mahmoudsamhoud"
                   target="_blank"
                   title="GitHub"
                   ><i class="bi bi-github"></i
                 ></a>
+                <a href="https://www.hackerrank.com/profile/mahmoudsamhoud0" target="_blank" rel="noopener noreferrer" title="HackerRank" aria-label="HackerRank profile">
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M12 1 22 6.5v11L12 23 2 17.5v-11L12 1Zm-4 5v12h2v-5h4v5h2V6h-2v5h-4V6H8Z"/></svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- /Hero Section -->
+      <div class="discipline-strip" aria-label="Engineering focus"><span>DESIGN</span><span>SIMULATION</span><span>AUTOMATION</span><span>STATIC EQUIPMENT</span></div>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span class="section-eyebrow">01 / SELECTED WORK</span>
+          <h2>Ideas, engineered.</h2>
+          <p>Explore my recent work.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active" role="button" tabindex="0">All</li>
+              <li data-filter=".filter-mechanical-design" role="button" tabindex="0">Mechanical Design</li>
+              <li data-filter=".filter-mechanical-simulation" role="button" tabindex="0">Mechanical Simulation</li>
+              <li data-filter=".filter-engineering-software" role="button" tabindex="0">Engineering Software</li>
+              <li data-filter=".filter-static-equipment" role="button" tabindex="0">Static Equipment</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-engineering-software"
+                data-project="project-1" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-1"
+              >
+                <img loading="lazy" decoding="async"
+                  src="assets/projects/Pr01-ExtruCAD/work-06.jpg"
+                  class="img-fluid"
+                  alt="ExtruCAD"
+                />
+                <div class="portfolio-info">
+                  <span class="project-index">01 / ENGINEERING SOFTWARE</span><h4>ExtruCAD<i class="bi bi-arrow-up-right" aria-hidden="true"></i></h4><p>Cold extrusion calculations, brought together in a dedicated engineering tool.</p><span class="project-open">Explore project</span>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mechanical-simulation"
+                data-project="project-2" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-2"
+              >
+                <img loading="lazy" decoding="async"
+                  src="assets/projects/Pr02-Motion-Analysis/work-07.jpg"
+                  class="img-fluid"
+                  alt="Motion Analysis"
+                />
+                <div class="portfolio-info">
+                  <span class="project-index">02 / MECHANICAL SIMULATION</span><h4>Motion Analysis<i class="bi bi-arrow-up-right" aria-hidden="true"></i></h4><p>Exploring inline-engine kinematics through MATLAB and SolidWorks.</p><span class="project-open">Explore project</span>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mechanical-design"
+                data-project="project-3" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-3"
+              >
+                <img loading="lazy" decoding="async"
+                  src="assets/projects/Pr03-Nesting-Plates/BalerBodyRightSideMesh.PNG"
+                  class="img-fluid"
+                  alt="Nesting Plates"
+                />
+                <div class="portfolio-info">
+                  <span class="project-index">03 / MECHANICAL DESIGN</span><h4>Nesting Plates<i class="bi bi-arrow-up-right" aria-hidden="true"></i></h4><p>Comparing plate layouts to improve material use and reduce scrap.</p><span class="project-open">Explore project</span>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-engineering-software" data-project="project-orbit" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-orbit">
+                <img loading="lazy" decoding="async" src="assets/projects/Pr04-Orbit-Analyzer/ui-analysis.png" class="img-fluid" alt="Orbit Analyzer desktop UI with raw and filtered shaft orbits and frequency spectrum" />
+                <div class="portfolio-info">
+                  <span class="project-index">04 / ENGINEERING SOFTWARE</span><h4>Orbit Analyzer<i class="bi bi-arrow-up-right" aria-hidden="true"></i></h4><p>From vibration recordings to verified shaft-orbit plots, with a complete Python desktop workflow.</p><span class="project-open">Explore project</span>
+                </div>
+              </div>
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-engineering-software filter-static-equipment" data-project="project-tank" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-tank">
+<img loading="lazy" decoding="async" src="assets/projects/Pr05-Storage-Tank-Design-Tool/tank-overview.svg" class="img-fluid" alt="Storage Tank Design Tool — illustrated tank elevation and plan" />
+<div class="portfolio-info"><span class="project-index">05 / STATIC EQUIPMENT</span><h4>Storage Tank Design Tool<i class="bi bi-arrow-up-right" aria-hidden="true"></i></h4><p>Tank configuration, engineering checks and drawing outputs in one browser application.</p><span class="project-open">Explore project</span></div></div>
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
 
       <!-- About Section -->
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>About</h2>
+          <span class="section-eyebrow">02 / PROFILE</span>
+          <h2>Engineering with purpose.</h2>
         </div>
         <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
             <div class="col-lg-12 content">
-              <p class="py-3">
-                A highly motivated Mechanical Engineer with hands-on experience
-                in structural simulation and static equipment engineering,
-                contributing to major FEED and EPC detailed engineering projects
-                within the oil & gas and petrochemical industries. Currently
-                working as a Static Equipment Engineer, with practical expertise
-                in the design and analysis of various types of static equipment
-                in accordance with internationally recognized standards
-                including ASME and API. <br />
-                <br />
-
-                Proficient in a wide range of industry-leading engineering
-                software, including PV Elite, NozzlePRO, SolidWorks, Abaqus, and
-                the 3DEXPERIENCE Platform. Experienced in finite element
-                analysis (FEA) and CAE methodologies for the simulation,
-                validation, and optimization of mechanical components and
-                structural systems. <br />
-                <br />
-
-                Strong background in structural, fatigue, and modal analysis,
-                with experience applying engineering principles to improve
-                structural integrity, operational reliability, and overall
-                system performance. Adept at conducting detailed technical
-                studies, interpreting engineering standards, and delivering
-                efficient, high-quality engineering solutions within
-                multidisciplinary project environments. <br />
-                <br />
-
-                Skilled in Python, MATLAB, and advanced Excel for engineering
-                automation, data analysis, and the development of custom
-                engineering tools and workflows. Additional programming
-                experience includes C and C++, enabling efficient
-                problem-solving and process optimization through computational
-                approaches.
-                <br />
-                <br />
-
-                Graduated from Cairo University Faculty of Engineering with
-                honors and ranked among the top students in the class.
-                Recognized for strong analytical thinking, attention to detail,
-                and the ability to work effectively both independently and
-                within collaborative engineering teams. Passionate about
-                computational mechanics, simulation-driven engineering, and
-                continuous professional development.
-              </p>
+              <p>I turn engineering questions into models, calculations, and practical design decisions.</p>
+              <p>I’m a Mechanical Engineer based in Cairo, working in static equipment engineering and structural simulation. My experience spans FEED and EPC projects in oil, gas, and petrochemicals, with design and analysis guided by ASME and API standards.</p>
+              <p>My work brings together finite element analysis, CAD, and engineering software. I use tools such as Abaqus, SolidWorks, and PV Elite, alongside Python and MATLAB, to investigate performance, validate designs, and automate calculations.</p>
               <div class="row">
                 <div class="col-lg-6">
                   <ul>
@@ -226,7 +273,8 @@
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
+          <span class="section-eyebrow">03 / BACKGROUND</span>
+          <h2>Built on engineering.</h2>
         </div>
         <!-- End Section Title -->
 
@@ -253,7 +301,7 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>FEA Engineer</h4>
+                <h4>FEA Engineer (Part-time Freelancer)</h4>
                 <h5>Jan 2024 - Present</h5>
                 <p><em>Freelancer </em></p>
               </div>
@@ -311,25 +359,7 @@
                 <h4>Data Science with Python</h4>
                 <h5>Jan 2022 - Jul 2022</h5>
                 <p><em>Datacamp</em></p>
-                <p>
-                  A 97-hour rigorous program designed to build essential data
-                  science skills. Acquired proficiency in
-                  <strong>Python</strong> for <strong>data analysis</strong>,
-                  <strong>data manipulation</strong>, and
-                  <strong>data visualization</strong>. Mastered key libraries
-                  such as <strong>pandas</strong>, <strong>NumPy</strong>,
-                  <strong>Matplotlib</strong>, and <strong>Seaborn</strong>.
-                  Gained hand s-on experience with
-                  <strong>machine learning</strong> techniques using
-                  <strong>scikit-learn</strong>, including
-                  <strong>regression</strong>, <strong>classification</strong>,
-                  and <strong>clustering</strong>. Developed skills in
-                  <strong>data cleaning</strong>,
-                  <strong>statistical analysis</strong>, and
-                  <strong>predictive modeling</strong>. Worked on real-world
-                  projects to apply data science techniques and enhance
-                  <strong>problem-solving</strong> abilities.
-                </p>
+                <p class="education-summary">A 97-hour program covering Python, data analysis, visualization, and machine learning.</p>
               </div>
               <!-- Edn Resume Item -->
 
@@ -337,41 +367,8 @@
                 <h4>BSc in Mechanical Design & Production Engineering</h4>
                 <h5>Oct 2018 - Jul 2022</h5>
                 <p><em>Faculty of Engineering, Cairo University</em></p>
-                <p>
-                  A comprehensive four-year program, Providing in-depth
-                  knowledge and practical skills in the <strong>design</strong>,
-                  <strong>analysis</strong>, and
-                  <strong>optimization</strong> of different
-                  <strong>mechanical systems</strong>. The curriculum covered
-                  core subjects such as <strong>materials science</strong>,
-                  <strong>stress analysis</strong>,
-                  <strong>solid mechanics</strong>, <strong>dynamics</strong>,
-                  <strong>automation</strong>,
-                  <strong>mechanical vibrations</strong>,
-                  <strong>thermodynamics</strong>, and,
-                  <strong>fluid mechanics</strong>. Gained hands-on experience
-                  with advanced CAD software (<strong>SolidWorks</strong>,
-                  <strong>CATIA</strong>) and CAE tools (<strong>ANSYS</strong>)
-                  for simulation and analysis. Developed strong programming
-                  skills in <strong>C++</strong>, <strong>Python</strong>, and
-                  <strong>MATLAB</strong>. Engaged in multiple design projects
-                  and internships, enhancing
-                  <strong>problem-solving</strong> abilities,
-                  <strong>teamwork</strong>, and
-                  <strong>project management</strong> skills.
-                </p>
-                <ul>
-                  <li>
-                    <strong>Grade</strong> :
-                    <strong>Very Good with Honor (Ranked 5th)</strong>.
-                  </li>
-                  <li>
-                    <strong>Relevant Coursework</strong>: >Mechanical Design,
-                    Stress Analysis, Structure Mechanics, Material Science,
-                    Welding, Theories of Cutting, Metal Forming, Mechanical
-                    Failure Analysis, Finite Element Analysis
-                  </li>
-                </ul>
+                <p class="education-summary">Mechanical design, solid mechanics, manufacturing, and finite element analysis. Practical work in CAD, simulation, and engineering programming.</p>
+                <p class="education-honor"><i class="bi bi-award" aria-hidden="true"></i> Very Good with Honor · Ranked 5th</p>
               </div>
               <!-- Edn Resume Item -->
 
@@ -379,23 +376,7 @@
                 <h4>Pre-Engineering</h4>
                 <h5>Oct 2017 - Jul 2018</h5>
                 <p><em>Faculty of Engineering, Cairo University</em></p>
-                <p>
-                  A one-year comprehensive Pre-Engineering Program, providing a
-                  strong foundation in <strong>mathematics</strong>,
-                  <strong>science</strong>, and
-                  <strong>engineering fundamentals</strong>. The program
-                  included coursework in <strong>algebra</strong>,
-                  <strong>calculus</strong>, <strong>physics</strong>, and
-                  <strong>chemistry</strong>, along with introductory
-                  engineering principles such as <strong>mechanics</strong> and
-                  <strong>electrical</strong> <strong>circuits</strong>. Gained
-                  proficiency in <strong>CAD software</strong> and
-                  <strong>programming languages</strong>, developed
-                  <strong>problem-solving</strong> and
-                  <strong>critical thinking</strong> skills through hands-on
-                  projects, and enhanced <strong>teamwork</strong> and
-                  <strong>communication abilities</strong>.
-                </p>
+                <p class="education-summary">Foundation studies in mathematics, physics, mechanics, and engineering fundamentals.</p>
               </div>
               <!-- Edn Resume Item -->
             </div>
@@ -407,292 +388,420 @@
       <!-- Skills Section -->
       <section id="skills" class="skills section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Skills & Tools</h2>
-          <p>Core engineering stack followed by categorized tools.</p>
+          <span class="section-eyebrow">04 / TOOLKIT</span>
+          <h2>Tools behind the work.</h2>
+          <p>From design and simulation to engineering software and analysis.</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="skills-core-stack">
-            <h3>Core Stack</h3>
-            <div class="skills-tools-grid core-grid">
-              <article class="skill-card">
-                <img
-                  src="assets/img/skills/solidworks.png"
-                  alt="SolidWorks"
-                  class="skill-img"
-                />
-                <h4>SolidWorks</h4>
-                <span class="skill-pill">Product Design</span>
-              </article>
-              <article class="skill-card">
-                <img
-                  src="assets/img/skills/ansys.png"
-                  alt="ANSYS"
-                  class="skill-img"
-                />
-                <h4>ANSYS</h4>
-                <span class="skill-pill">Simulation</span>
-              </article>
-              <article class="skill-card">
-                <img
-                  src="assets/img/skills/python.png"
-                  alt="Python"
-                  class="skill-img"
-                />
-                <h4>Python</h4>
-                <div class="skill-pill-list">
-                  <span class="skill-pill">Programming</span>
-                  <span class="skill-pill">Data Analysis</span>
+          <div class="skills-columns">
+            <div class="skills-column">
+              <h3 class="masonry-category-label cat-design-sim">Design & Simulation</h3>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async" src="assets/img/skills/solidworks.png" alt="SolidWorks" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">SolidWorks</span>
                 </div>
-              </article>
-              <article class="skill-card">
-                <img
-                  src="assets/img/skills/PVElite.png"
-                  alt="PV Elite"
-                  class="skill-img"
-                />
-                <h4>PV Elite</h4>
-                <span class="skill-pill">Static Equipment Design</span>
-              </article>
-            </div>
-          </div>
-
-          <div class="skills-filter-wrap">
-            <h3>Other Tools</h3>
-            <div
-              class="skills-filters"
-              role="group"
-              aria-label="Filter tools by category"
-            >
-              <button
-                type="button"
-                class="skill-filter active"
-                data-filter="all"
-              >
-                All
-              </button>
-              <button
-                type="button"
-                class="skill-filter"
-                data-filter="programming"
-              >
-                Programming
-              </button>
-              <button
-                type="button"
-                class="skill-filter"
-                data-filter="static-equipment-design"
-              >
-                Static Equipment Design
-              </button>
-              <button
-                type="button"
-                class="skill-filter"
-                data-filter="product-design"
-              >
-                Product Design
-              </button>
-              <button
-                type="button"
-                class="skill-filter"
-                data-filter="simulation"
-              >
-                Simulation
-              </button>
-              <button
-                type="button"
-                class="skill-filter"
-                data-filter="data-analysis"
-              >
-                Data Analysis
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="skills-category-group"
-            data-group="static-equipment-design"
-          >
-            <h4 class="skills-category-title">Static Equipment Design</h4>
-            <div class="skills-tools-grid">
-              <article
-                class="skill-card filterable-tool"
-                data-categories="static-equipment-design"
-              >
-                <div class="skill-badge">NP</div>
-                <h4>NozzlePRO</h4>
-                <span class="skill-pill">Static Equipment Design</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="static-equipment-design"
-              >
-                <img
-                  src="assets/img/skills/ametank.png"
-                  alt="AMETank"
-                  class="skill-img"
-                />
-                <h4>AMETank</h4>
-                <span class="skill-pill">Static Equipment Design</span>
-              </article>
-            </div>
-          </div>
-
-          <div class="skills-category-group" data-group="product-design">
-            <h4 class="skills-category-title">Product Design</h4>
-            <div class="skills-tools-grid">
-              <article
-                class="skill-card filterable-tool"
-                data-categories="product-design"
-              >
-                <img
-                  src="assets/img/skills/catia.png"
-                  alt="CATIA"
-                  class="skill-img"
-                />
-                <h4>CATIA</h4>
-                <span class="skill-pill">Product Design</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="product-design,simulation"
-              >
-                <img
+              </div>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async" src="assets/img/skills/ansys.png" alt="ANSYS" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">ANSYS</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async" src="assets/img/skills/catia.png" alt="CATIA" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">CATIA</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async" src="assets/img/skills/abaqus.png" alt="Abaqus" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">Abaqus</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async"
                   src="assets/img/skills/3dexperience.png"
-                  alt="3D Experience"
-                  class="skill-img"
+                  alt="3DEXPERIENCE"
                 />
-                <h4>3DEXPERIENCE</h4>
-                <div class="skill-pill-list">
-                  <span class="skill-pill">Product Design</span>
-                  <span class="skill-pill">Simulation</span>
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">3DEXPERIENCE</span>
                 </div>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="product-design"
-              >
-                <img
-                  src="assets/img/skills/nestfab.png"
-                  alt="NestFab"
-                  class="skill-img"
-                />
-                <h4>NestFab</h4>
-                <span class="skill-pill">Product Design</span>
-              </article>
-            </div>
-          </div>
-
-          <div class="skills-category-group" data-group="simulation">
-            <h4 class="skills-category-title">Simulation</h4>
-            <div class="skills-tools-grid">
-              <article
-                class="skill-card filterable-tool"
-                data-categories="simulation"
-              >
-                <img
-                  src="assets/img/skills/abaqus.png"
-                  alt="Abaqus"
-                  class="skill-img"
-                />
-                <h4>Abaqus</h4>
-                <span class="skill-pill">Simulation</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="product-design,simulation"
-              >
-                <img
-                  src="assets/img/skills/3dexperience.png"
-                  alt="3D Experience"
-                  class="skill-img"
-                />
-                <h4>3DEXPERIENCE</h4>
-                <div class="skill-pill-list">
-                  <span class="skill-pill">Product Design</span>
-                  <span class="skill-pill">Simulation</span>
+              </div>
+              <div class="masonry-card cat-design-sim">
+                <img loading="lazy" decoding="async" src="assets/img/skills/nestfab.png" alt="NestFab" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">NestFab</span>
                 </div>
-              </article>
+              </div>
             </div>
-          </div>
 
-          <div class="skills-category-group" data-group="programming">
-            <h4 class="skills-category-title">Programming</h4>
-            <div class="skills-tools-grid">
-              <article
-                class="skill-card filterable-tool"
-                data-categories="programming"
-              >
-                <img
-                  src="assets/img/skills/cpp.png"
-                  alt="C++"
-                  class="skill-img"
-                />
-                <h4>C++</h4>
-                <span class="skill-pill">Programming</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="programming"
-              >
-                <img src="assets/img/skills/c.png" alt="C" class="skill-img" />
-                <h4>C</h4>
-                <span class="skill-pill">Programming</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="programming"
-              >
-                <img
-                  src="assets/img/skills/matlab.png"
-                  alt="MATLAB"
-                  class="skill-img"
-                />
-                <h4>MATLAB</h4>
-                <span class="skill-pill">Programming</span>
-              </article>
+            <div class="skills-column">
+              <h3 class="masonry-category-label cat-equipment">Static Equipment</h3>
+              <div class="masonry-card cat-equipment">
+                <img loading="lazy" decoding="async" src="assets/img/skills/PVElite.png" alt="PV Elite" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">PV Elite</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-equipment">
+                <img loading="lazy" decoding="async" src="assets/img/skills/Compress.png" alt="COMPRESS" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">COMPRESS</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-equipment">
+                <img loading="lazy" decoding="async" src="assets/img/skills/ametank.png" alt="AMETank" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">AMETank</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-equipment">
+                <div class="masonry-card-badge">NP</div>
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">NozzlePRO</span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="skills-category-group" data-group="data-analysis">
-            <h4 class="skills-category-title">Data Analysis</h4>
-            <div class="skills-tools-grid">
-              <article
-                class="skill-card filterable-tool"
-                data-categories="data-analysis"
-              >
-                <img
-                  src="assets/img/skills/sql.png"
-                  alt="SQL & MySQL"
-                  class="skill-img"
-                />
-                <h4>SQL / MySQL</h4>
-                <span class="skill-pill">Data Analysis</span>
-              </article>
-              <article
-                class="skill-card filterable-tool"
-                data-categories="data-analysis"
-              >
-                <img
-                  src="assets/img/skills/powerbi.png"
-                  alt="MS Power BI"
-                  class="skill-img"
-                />
-                <h4>MS Power BI</h4>
-                <span class="skill-pill">Data Analysis</span>
-              </article>
+            <div class="skills-column">
+              <h3 class="masonry-category-label cat-programming">Programming</h3>
+              <div class="masonry-card cat-programming">
+                <img loading="lazy" decoding="async" src="assets/img/skills/python.png" alt="Python" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">Python</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-programming">
+                <img loading="lazy" decoding="async" src="assets/img/skills/c.png" alt="C" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">C</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-programming">
+                <img loading="lazy" decoding="async" src="assets/img/skills/cpp.png" alt="C++" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">C++</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-programming">
+                <img loading="lazy" decoding="async" src="assets/img/skills/matlab.png" alt="MATLAB" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">MATLAB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-column">
+              <h3 class="masonry-category-label cat-data">Data Analysis</h3>
+              <div class="masonry-card cat-data">
+                <img loading="lazy" decoding="async" src="assets/img/skills/powerbi.png" alt="Power BI" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">Power BI</span>
+                </div>
+              </div>
+              <div class="masonry-card cat-data">
+                <img loading="lazy" decoding="async" src="assets/img/skills/sql.png" alt="SQL" />
+                <div class="masonry-card-info">
+                  <span class="masonry-card-name">SQL / MySQL</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- /Skills Section -->
 
-      <!-- Portfolio Section -->
+
+
+      <!-- Project Modals -->
+<div class="modal" id="project-tank" role="dialog" aria-modal="true" aria-labelledby="project-tank-title" tabindex="-1"><div class="modal-content"><button type="button" class="close-modal" aria-label="Close project">&times;</button>
+<div class="project-header"><h2 id="project-tank-title">Storage Tank Design Tool — API 650</h2><div class="project-meta"><span>Static Equipment</span><span>Engineering Software</span><span>JavaScript</span></div></div>
+<div class="project-body"><div class="project-description"><h3>Project Overview</h3><p>A standalone browser tool that connects storage-tank design inputs with engineering checks, nozzle reinforcement, reports and drawing exports.</p><h3>Engineering Workflow</h3><ul><li>SI and US Customary inputs with material and roof selections</li><li>Shell, bottom, roof, wind, seismic and anchorage calculations</li><li>Clause-referenced check summaries and design notes</li><li>Excel data sheets, print/PDF reports and drawing exports</li></ul><h3>Development</h3><p>Developed by <strong>Eng. Hesham Fouad and Eng. Mahmoud Samhoud</strong>, Static Equipment Engineers, Pressure Vessels Department – ENPPI, as credited in the supplied application.</p><div class="project-gallery"><h3>Project Illustration</h3><div class="gallery-grid"><a href="assets/projects/Pr05-Storage-Tank-Design-Tool/tank-overview.svg"><img src="assets/projects/Pr05-Storage-Tank-Design-Tool/tank-overview.svg" class="gallery-img" alt="Storage tank elevation and plan illustration, not an application screenshot" loading="lazy" /></a></div></div></div>
+<div class="project-details"><h3>Project Details</h3><div class="detail-item"><h4>Design Basis</h4><p>API 650, 13th Edition (March 2020), as stated in the application</p></div><div class="detail-item"><h4>Tools Used</h4><p>HTML, CSS, JavaScript, SVG and browser-based exports</p></div><div class="detail-item"><h4>Revision</h4><p>Rev.03 · Standalone HTML application</p></div><div class="detail-item"><h4>Documentation</h4><p>Workflow, implemented features, outputs and review status.</p><a class="view-report-btn" href="assets/projects/Pr05-Storage-Tank-Design-Tool/work-05.html">View Full Report</a></div></div></div></div></div>
+
+      <div class="modal" id="project-orbit" role="dialog" aria-modal="true" aria-labelledby="project-orbit-title" tabindex="-1">
+        <div class="modal-content">
+          <button type="button" class="close-modal" aria-label="Close project">&times;</button>
+          <div class="project-header">
+            <h2 id="project-orbit-title">Orbit Analyzer — Shaft Vibration Analysis</h2>
+            <div class="project-meta"><span>Engineering Software</span><span>Python</span><span>Signal Processing</span></div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <h3>Project Overview</h3>
+              <p>A desktop application for importing CSV and Excel vibration recordings, inspecting paired X/Y shaft displacement and isolating the frequency band around running speed.</p>
+              <h3>Engineering Approach</h3>
+              <p>Refined the original script by correcting a reversed filter and its timing calculation, then added a Tkinter interface with explicit validation, zero-phase filtering, transient exclusion and reproducible exports.</p>
+              <ul><li>Raw orbit, filtered orbit, one-revolution view and spectrum</li><li>Worksheet selection and an explicit sampling-rate override</li><li>Input checks, RMS and peak-to-peak metrics, and processing notes</li><li>CSV and JSON exports, plus PNG/PDF plots</li></ul>
+              <h3>Verified Results</h3>
+              <p>All 12 numerical tests passed. Tests checked amplitude and phase recovery against known synthetic signals. With the verified 6,400 Hz clock, the supplied CSV and Excel filtered results agree within 0.0000004 µm.</p>
+              <div class="project-gallery"><h3>Application Snapshots</h3><div class="gallery-grid">
+                <a href="assets/projects/Pr04-Orbit-Analyzer/ui-analysis.png" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/projects/Pr04-Orbit-Analyzer/ui-analysis.png" alt="Actual Orbit Analyzer plots and frequency controls" class="gallery-img" /></a>
+                <a href="assets/projects/Pr04-Orbit-Analyzer/ui-validation.png" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/projects/Pr04-Orbit-Analyzer/ui-validation.png" alt="Actual validation tab showing metrics, processing method and input notes" class="gallery-img" /></a>
+              </div></div>
+            </div>
+            <div class="project-details">
+              <h3>Project Details</h3>
+              <div class="detail-item"><h4>Focus</h4><p>Rotating machinery, displacement signals and numerical validation</p></div>
+              <div class="detail-item"><h4>Tools Used</h4><p>Python, NumPy, SciPy, Matplotlib, Tkinter, openpyxl</p></div>
+              <div class="detail-item"><h4>Reference Recording</h4><p>32,769 samples · 6,400 Hz · 5.12 seconds</p></div>
+              <div class="detail-item"><h4>Documentation</h4><p>Input audit, user workflow, processing method, selected code snapshots and validation evidence.</p><a href="assets/projects/Pr04-Orbit-Analyzer/work-08.html" class="view-report-btn">View Full Report</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="project-1" role="dialog" aria-modal="true" aria-labelledby="project-1-title" tabindex="-1">
+        <div class="modal-content">
+          <button type="button" class="close-modal" aria-label="Close project">&times;</button>
+          <div class="project-header">
+            <h2 id="project-1-title">ExtruCAD - Cold Extrusion Simulator</h2>
+            <div class="project-meta">
+              <span>Engineering Software</span>
+              <span>Simulation</span>
+              <span>CAD</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <h3>Project Overview</h3>
+              <p>
+                Developed a comprehensive cold extrusion simulation tool that
+                helps engineers optimize the extrusion process parameters and
+                predict material behavior during cold forming operations.
+              </p>
+
+              <h3>Technical Approach</h3>
+              <p>
+                The project involved developing a custom simulation environment
+                that combines:
+              </p>
+              <ul>
+                <li>Finite element analysis for material deformation</li>
+                <li>Real-time visualization of the extrusion process</li>
+                <li>Parameter optimization algorithms</li>
+                <li>Material property database integration</li>
+                <li>Automated report generation</li>
+              </ul>
+
+              <h3>Results</h3>
+              <p>
+                The simulator successfully reduced design iteration time by 40%
+                and improved prediction accuracy of material behavior by 25%.
+                The tool is now being used in production environments for
+                process optimization.
+              </p>
+
+              <div class="project-gallery">
+                <h3>Project Gallery</h3>
+                <div class="gallery-grid">
+                  <img loading="lazy" decoding="async"
+                    src="assets/projects/Pr01-ExtruCAD/work-06.jpg"
+                    alt="Cold extrusion equipment"
+                    class="gallery-img"
+                  />
+                  <img loading="lazy" decoding="async"
+                    src="assets/projects/Pr01-ExtruCAD/gui.png"
+                    alt="ExtruCAD MATLAB interface"
+                    class="gallery-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Project Details</h3>
+              <div class="detail-item">
+                <h4>Duration</h4>
+                <p>6 months</p>
+              </div>
+              <div class="detail-item">
+                <h4>Tools Used</h4>
+                <p>Python, C++, OpenGL, FEA Libraries</p>
+              </div>
+              <div class="detail-item">
+                <h4>Key Achievements</h4>
+                <p>
+                  40% reduction in design time, 25% improvement in prediction
+                  accuracy
+                </p>
+                <a
+                  href="assets/projects/Pr01-ExtruCAD/work-06.html"
+                  class="view-report-btn"
+                  >View Full Report</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="project-2" role="dialog" aria-modal="true" aria-labelledby="project-2-title" tabindex="-1">
+        <div class="modal-content">
+          <button type="button" class="close-modal" aria-label="Close project">&times;</button>
+          <div class="project-header">
+            <h2 id="project-2-title">Motion Analysis - Inline-Engine Motion Analysis</h2>
+            <div class="project-meta">
+              <span>Mechanical Simulation</span>
+              <span>Simulation</span>
+              <span>Dynamics</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <h3>Project Overview</h3>
+              <p>
+                Developed a comprehensive motion analysis system for inline
+                engines, focusing on the dynamic behavior of engine components
+                and their interactions.
+              </p>
+
+              <h3>Technical Approach</h3>
+              <p>
+                The project involved creating a detailed simulation environment
+                that includes:
+              </p>
+              <ul>
+                <li>Kinematic analysis of engine components</li>
+                <li>Dynamic force calculations</li>
+                <li>Vibration analysis</li>
+                <li>Real-time visualization of motion</li>
+                <li>Performance optimization algorithms</li>
+              </ul>
+
+              <h3>Results</h3>
+              <p>
+                The analysis system successfully identified critical motion
+                patterns and potential failure points, leading to improved
+                engine design and performance optimization.
+              </p>
+
+              <div class="project-gallery">
+                <h3>Project Gallery</h3>
+                <div class="gallery-grid">
+                  <img loading="lazy" decoding="async"
+                    src="assets/projects/Pr02-Motion-Analysis/work-07.jpg"
+                    alt="Motion Analysis Interface"
+                    class="gallery-img"
+                  />
+                  <img loading="lazy" decoding="async"
+                    src="assets/projects/Pr02-Motion-Analysis/gui.png"
+                    alt="Analysis Results"
+                    class="gallery-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Project Details</h3>
+              <div class="detail-item">
+                <h4>Duration</h4>
+                <p>4 months</p>
+              </div>
+              <div class="detail-item">
+                <h4>Tools Used</h4>
+                <p>MATLAB, SolidWorks, Python</p>
+              </div>
+              <div class="detail-item">
+                <h4>Key Achievements</h4>
+                <p>
+                  Improved engine efficiency by 15%, reduced vibration by 20%
+                </p>
+                <a
+                  href="assets/projects/Pr02-Motion-Analysis/work-07.html"
+                  class="view-report-btn"
+                  >View Full Report</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="project-3" role="dialog" aria-modal="true" aria-labelledby="project-3-title" tabindex="-1">
+        <div class="modal-content">
+          <button type="button" class="close-modal" aria-label="Close project">&times;</button>
+          <div class="project-header">
+            <h2 id="project-3-title">Nesting Plates - Multi-Body Parts Optimization</h2>
+            <div class="project-meta">
+              <span>Mechanical Design</span>
+              <span>Manufacturing</span>
+              <span>Optimization</span>
+              <span>CAD</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <h3>Project Overview</h3>
+              <p>
+                Developed an advanced nesting solution for optimizing the layout
+                of multiple body parts on sheet metal, maximizing material
+                utilization and reducing waste.
+              </p>
+
+              <h3>Technical Approach</h3>
+              <p>
+                The project implemented a sophisticated nesting algorithm that
+                considers:
+              </p>
+              <ul>
+                <li>Part geometry and constraints</li>
+                <li>Material properties and limitations</li>
+                <li>Manufacturing requirements</li>
+                <li>Cutting path optimization</li>
+                <li>Quality control parameters</li>
+              </ul>
+
+              <h3>Results</h3>
+              <p>
+                The nesting solution achieved a 30% reduction in material waste
+                and improved production efficiency by 25%.
+              </p>
+
+              <div class="project-gallery">
+                <h3>Project Gallery</h3>
+                <div class="gallery-grid">
+                  <img loading="lazy" decoding="async"
+                    src="assets/projects/Pr03-Nesting-Plates/BalerBodyRightSideMesh.PNG"
+                    alt="Nesting Layout"
+                    class="gallery-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Project Details</h3>
+              <div class="detail-item">
+                <h4>Duration</h4>
+                <p>3 months</p>
+              </div>
+              <div class="detail-item">
+                <h4>Tools Used</h4>
+                <p>NestFab, SolidWorks, CATIA</p>
+              </div>
+              <div class="detail-item">
+                <h4>Key Achievements</h4>
+                <p>
+                  30% material waste reduction, 25% production efficiency
+                  improvement
+                </p>
+                <a
+                  href="assets/projects/Pr03-Nesting-Plates/work-05.html"
+                  class="view-report-btn"
+                  >View Full Report</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
+          <span class="section-eyebrow">05 / CONTACT</span>
+          <h2>Let’s build something.</h2>
           <p>
             Let's connect and explore how we can achieve great results together.
           </p>
@@ -743,6 +852,7 @@
                       type="text"
                       name="name"
                       class="form-control"
+                      aria-label="Your name"
                       placeholder="Your Name"
                       required
                       autocomplete="given-name"
@@ -754,9 +864,10 @@
                       type="email"
                       class="form-control"
                       name="email"
+                      aria-label="Your email"
                       placeholder="Your Email"
                       required
-                      autocomplete="family-name"
+                      autocomplete="email"
                     />
                   </div>
 
@@ -765,6 +876,7 @@
                       type="text"
                       class="form-control"
                       name="subject"
+                      aria-label="Subject"
                       placeholder="Subject"
                       required
                     />
@@ -775,6 +887,7 @@
                       class="form-control"
                       name="message"
                       rows="6"
+                      aria-label="Message"
                       placeholder="Message"
                       required
                     ></textarea>
@@ -785,7 +898,7 @@
                   </div>
                 </div>
               </form>
-              <div class="sent-message text-center" id="contact-message"></div>
+              <div class="text-center contact-status" id="contact-message" role="status" aria-live="polite"></div>
             </div>
             <!-- End Contact Form -->
           </div>
@@ -804,15 +917,16 @@
             title="linkedIn"
             ><i class="bi bi-linkedin"></i
           ></a>
-          <a href="https://medium.com/@m.samhoud" target="_blank" title="Medium"
-            ><i class="bi bi-medium"></i
-          ></a>
+
           <a
             href="https://github.com/mahmoudsamhoud"
             target="_blank"
             title="GitHub"
             ><i class="bi bi-github"></i
           ></a>
+          <a href="https://www.hackerrank.com/profile/mahmoudsamhoud0" target="_blank" rel="noopener noreferrer" title="HackerRank" aria-label="HackerRank profile">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M12 1 22 6.5v11L12 23 2 17.5v-11L12 1Zm-4 5v12h2v-5h4v5h2V6h-2v5h-4V6H8Z"/></svg>
+          </a>
         </div>
         <div class="container">
           <div class="copyright">
@@ -839,7 +953,6 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
@@ -847,7 +960,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=gallery-20261118"></script>
 
     <!--=============== EMAIL JS ===============-->
     <script src="assets/vendor/php-email-form/connect.js"></script>

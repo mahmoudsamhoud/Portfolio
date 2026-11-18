@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+
+# Standalone project repository checkouts
+/repository-exports/

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Storage Tank Design Tool</title><desc id="desc">Portfolio illustration of a storage tank elevation and plan, not a design drawing or application screenshot.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#254052" stroke-width=".7"/></pattern></defs>
+<rect width="1440" height="900" fill="#101e2d"/><rect width="1440" height="900" fill="url(#grid)"/>
+<g font-family="Segoe UI,Arial,sans-serif"><text x="80" y="90" fill="#6dd6cf" font-size="22" letter-spacing="4">STATIC EQUIPMENT / ENGINEERING SOFTWARE</text>
+<text x="80" y="166" fill="#f0f6fa" font-size="54" font-weight="700">Storage Tank Design Tool</text><text x="82" y="212" fill="#a9bdce" font-size="25">Design inputs. Calculation checks. Drawing outputs.</text>
+<g fill="none" stroke="#8bc9d8" stroke-width="3"><path d="M170 405L475 320L780 405V710H170Z"/><path d="M170 466H780M170 527H780M170 588H780M170 649H780" stroke="#527b90"/><path d="M145 715H805M475 320V710"/><path d="M170 445H780" stroke="#67d7cc" stroke-dasharray="10 8"/><path d="M130 405V710M119 405H141M119 710H141M170 752H780M170 740V764M780 740V764"/><circle cx="1100" cy="530" r="157"/><circle cx="1100" cy="530" r="146" stroke="#527b90"/><path d="M920 530H1280M1100 350V710" stroke="#527b90" stroke-dasharray="9 8"/><path d="M1257 530H1305V555H1260M770 625H820V655H780"/></g>
+<text x="360" y="798" fill="#a9bdce" font-size="21">TANK ELEVATION</text><text x="1040" y="748" fill="#a9bdce" font-size="21">PLAN VIEW</text>
+<text x="80" y="860" fill="#6dd6cf" font-size="18">API 650 · 13th Edition basis</text><text x="895" y="860" fill="#a9bdce" font-size="16">PROJECT ILLUSTRATION · NOT TO SCALE</text></g></svg>
