@@ -4,3 +4,11 @@
 
 # Standalone project repository checkouts
 /repository-exports/
+
+# Keep project development files in D:/Projects, outside the published portfolio.
+/assets/projects/**/.git
+/assets/projects/**/.github/
+/assets/projects/**/.gitmodules
+/assets/projects/**/.venv/
+/assets/projects/**/__pycache__/
+/assets/projects/**/*.pyc
