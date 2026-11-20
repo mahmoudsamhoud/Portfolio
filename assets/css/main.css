@@ -2003,6 +2003,7 @@ section.light-background {
   height: 4px;
   background: var(--border-color);
   z-index: 1000;
+  pointer-events: none;
 }
 
 .reading-progress-bar {
@@ -2010,6 +2011,14 @@ section.light-background {
   background: var(--accent-color);
   width: 0;
   transition: width 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress-bar { transition: none; }
+}
+
+@media print {
+  .reading-progress { display: none; }
 }
 
 /* Adjust main content to account for progress bar */

@@ -572,23 +572,53 @@
 
   // Reading Progress Bar
   function initReadingProgress() {
-    const progressBar = document.querySelector(".reading-progress-bar");
+    let progressBar = document.querySelector(".reading-progress-bar");
+    if (!progressBar && document.body.matches(".project-report, .orbit-case")) {
+      const track = document.createElement("div");
+      track.className = "reading-progress";
+      track.setAttribute("aria-hidden", "true");
+      progressBar = document.createElement("div");
+      progressBar.className = "reading-progress-bar";
+      track.appendChild(progressBar);
+      document.body.prepend(track);
+    }
     if (!progressBar) return;
 
+    let pending = false;
     function updateProgress() {
+      pending = false;
       const windowHeight = window.innerHeight;
       const documentHeight =
         document.documentElement.scrollHeight - windowHeight;
       const scrolled = window.scrollY;
       const progress =
-        documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
+        documentHeight > 0
+          ? Math.min(100, Math.max(0, (scrolled / documentHeight) * 100))
+          : 100;
       progressBar.style.width = `${progress}%`;
     }
 
-    window.addEventListener("scroll", updateProgress);
-    window.addEventListener("resize", updateProgress);
+    function scheduleProgress() {
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(updateProgress);
+    }
+
+    window.addEventListener("scroll", scheduleProgress, { passive: true });
+    window.addEventListener("resize", scheduleProgress);
+    window.addEventListener("load", scheduleProgress);
+    window.addEventListener("pageshow", scheduleProgress);
+    // Images and expandable content can change the page height after load.
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(scheduleProgress);
+      observer.observe(document.body);
+    }
     updateProgress();
   }
 
-  document.addEventListener("DOMContentLoaded", initReadingProgress);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReadingProgress);
+  } else {
+    initReadingProgress();
+  }
 })();
