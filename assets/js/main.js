@@ -453,6 +453,7 @@
         previousFocus = document.activeElement;
         previousOverflow = document.body.style.overflow;
         modal.style.display = "block";
+        modal.dispatchEvent(new Event("reading-progress-update"));
         modal.querySelector(".close-modal")?.focus();
         document.body.style.overflow = "hidden";
       }
@@ -572,48 +573,64 @@
 
   // Reading Progress Bar
   function initReadingProgress() {
-    let progressBar = document.querySelector(".reading-progress-bar");
-    if (!progressBar && document.body.matches(".project-report, .orbit-case")) {
+    function createTrack(container) {
+      const existing = container.querySelector(":scope > .reading-progress");
+      if (existing) return existing.querySelector(".reading-progress-bar");
       const track = document.createElement("div");
       track.className = "reading-progress";
       track.setAttribute("aria-hidden", "true");
-      progressBar = document.createElement("div");
+      const progressBar = document.createElement("div");
       progressBar.className = "reading-progress-bar";
       track.appendChild(progressBar);
-      document.body.prepend(track);
-    }
-    if (!progressBar) return;
-
-    let pending = false;
-    function updateProgress() {
-      pending = false;
-      const windowHeight = window.innerHeight;
-      const documentHeight =
-        document.documentElement.scrollHeight - windowHeight;
-      const scrolled = window.scrollY;
-      const progress =
-        documentHeight > 0
-          ? Math.min(100, Math.max(0, (scrolled / documentHeight) * 100))
-          : 100;
-      progressBar.style.width = `${progress}%`;
+      container.prepend(track);
+      return progressBar;
     }
 
-    function scheduleProgress() {
-      if (pending) return;
-      pending = true;
-      window.requestAnimationFrame(updateProgress);
+    function bindProgress(container, isPage) {
+      const progressBar = createTrack(container);
+      let pending = false;
+      function updateProgress() {
+        pending = false;
+        if (!isPage && container.clientHeight === 0) return;
+        const documentHeight = isPage
+          ? document.documentElement.scrollHeight - window.innerHeight
+          : container.scrollHeight - container.clientHeight;
+        const scrolled = isPage ? window.scrollY : container.scrollTop;
+        const progress =
+          documentHeight > 0
+            ? Math.min(100, Math.max(0, (scrolled / documentHeight) * 100))
+            : 100;
+        progressBar.style.width = `${progress}%`;
+      }
+
+      function scheduleProgress() {
+        if (pending) return;
+        pending = true;
+        window.requestAnimationFrame(updateProgress);
+      }
+
+      (isPage ? window : container).addEventListener("scroll", scheduleProgress, { passive: true });
+      container.addEventListener("reading-progress-update", scheduleProgress);
+      window.addEventListener("resize", scheduleProgress);
+      window.addEventListener("load", scheduleProgress);
+      window.addEventListener("pageshow", scheduleProgress);
+      // Images and expandable content can change the page height after load.
+      if (typeof ResizeObserver !== "undefined") {
+        const observer = new ResizeObserver(scheduleProgress);
+        observer.observe(container);
+        if (!isPage) {
+          const content = container.querySelector(".modal-content");
+          if (content) observer.observe(content);
+        }
+      }
+      updateProgress();
     }
 
-    window.addEventListener("scroll", scheduleProgress, { passive: true });
-    window.addEventListener("resize", scheduleProgress);
-    window.addEventListener("load", scheduleProgress);
-    window.addEventListener("pageshow", scheduleProgress);
-    // Images and expandable content can change the page height after load.
-    if (typeof ResizeObserver !== "undefined") {
-      const observer = new ResizeObserver(scheduleProgress);
-      observer.observe(document.body);
+    if (document.body.matches(".project-report, .orbit-case") ||
+        document.body.querySelector(":scope > .reading-progress")) {
+      bindProgress(document.body, true);
     }
-    updateProgress();
+    document.querySelectorAll(".modal").forEach(modal => bindProgress(modal, false));
   }
 
   if (document.readyState === "loading") {
