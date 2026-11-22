@@ -1,0 +1,11 @@
+﻿Part,Assigned project material,Selection rationale,Proposed condition / next check
+Part1,Ductile iron - ASTM A536 65-45-12,Cast carrier body; machinable housing and support features.,As-cast / machined; verify casting and fatigue design.
+Part2,AISI 4140 - quenched and tempered,Cover combines the casing flange with projecting dog features; alloy steel is proposed for those loaded interfaces.,Quench and temper; specify final hardness after load review.
+Part3,AISI 4140 - quenched and tempered,Splined shaft; toughness and a heat-treatable steel for torsion and bending.,Quench and temper; review spline surface treatment.
+Part4,AISI 8620 - carburizing steel,Side gear and integral spline; case-hardening steel for wearing surfaces with a tougher core.,"Carburize, quench and temper; case depth and finishing to be designed."
+Part5,AISI 8620 - carburizing steel,Side gear with internal spline; proposed wear-resistant case on gear and spline surfaces.,"Carburize, quench and temper; control bore and tooth distortion."
+Part6,AISI 4140 - quenched and tempered,Dog collar; proposed toughness for the engagement features.,Quench and temper; review local hardening once operation is established.
+Part7,C93200 bearing bronze,Spacer interpreted as a thrust washer; bearing bronze for a lubricated sliding interface.,"Machined bronze; verify pressure, speed, lubrication and axial clearance."
+straight miter gear_iso,AISI 8620 - carburizing steel,Both transverse gears; same case-hardening family as the side gears.,"Carburize, quench and temper; verify stem strength and gear contact."
+hex flange bolt small_iso,Carbon steel - fastener baseline,Nominal carbon-steel CAD material for six M6 flange bolts.,Purchase target: property class 8.8; confirm preload and joint loads.
+hex flange nut gradea_iso,Carbon steel - fastener baseline,Nominal carbon-steel CAD material for six M6 flange nuts.,Purchase target: property class 8; confirm compatible certified fasteners.
