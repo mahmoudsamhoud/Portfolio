@@ -1,4 +1,4 @@
-﻿CAD part,Description,Quantity,Assigned material,Local XYZ envelope mm
+﻿CAD component,Description,Quantity,Assigned material,Local XYZ envelope mm
 shaft1,Stepped drive shaft,1,St50 - report designation,290.50 x 55.00 x 55.00
 Housing,Bearing housing,1,EN-GJL-300 - report designation,189.57 x 291.06 x 336.09
 Hub1,Drum hub,1,Aluminium alloy - proposed,80.00 x 80.00 x 30.00
@@ -11,9 +11,5 @@ space between bearing and pulley,Pulley-side sleeve,1,Carbon steel - proposed,33
 space between outer drum and first bearing,Drum-side sleeve,1,Carbon steel - proposed,73.00 x 50.00 x 50.00
 حله الغسيل,Inner drum,1,Stainless steel 201 - report designation,502.00 x 502.00 x 402.50
 الحلة الخارجية,Outer drum,1,Stainless steel 304 - proposed,602.00 x 602.00 x 50.00
-6011_2Z_17,6011 rolling element,13,Bearing steel - proposed,10.32 x 10.32 x 10.32
-6011_2Z_31,6011 outer ring,1,Bearing steel - proposed,18.00 x 90.00 x 90.00
-6011_2Z_33,6011 inner ring,1,Bearing steel - proposed,18.00 x 81.50 x 81.50
-6308_2RZ_12,6308 rolling element,8,Bearing steel - proposed,15.08 x 15.08 x 15.08
-6308_2RZ_21,6308 outer ring,1,Bearing steel - proposed,23.00 x 90.00 x 90.00
-6308_2RZ_23,6308 inner ring,1,Bearing steel - proposed,23.00 x 73.75 x 73.75
+6011_2Z,Bearing B - 6011-2Z,1,Bearing steel - purchased subassembly,18.00 x 90.00 x 90.00
+6308_2RZ,Bearing A - 6308-2RZ,1,Bearing steel - purchased subassembly,23.00 x 90.00 x 90.00
